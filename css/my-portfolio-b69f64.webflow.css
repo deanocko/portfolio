@@ -1191,6 +1191,7 @@ figcaption {
 
 .div-block-3 {
 	display: flex;
+	align-items: center;
 }
 
 .image-4 {

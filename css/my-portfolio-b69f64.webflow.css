@@ -1372,7 +1372,7 @@ figcaption {
 	object-fit: cover;
 	border-radius: 0;
 	position: static;
-	overflow: visible;
+	overflow: hidden;
 }
 
 .div-block-5 {
@@ -1387,6 +1387,7 @@ figcaption {
 	border: 2px solid rgba(0, 0, 0, 0);
 	padding: 30px 15px;
 	text-decoration: none;
+	overflow: hidden;
 }
 
 .div-block-5.project-card:hover {

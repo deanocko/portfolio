@@ -132,6 +132,14 @@ table {
 
 /* ! CSS Reset */
 
+.image-4 {
+	width: 33.33%;
+	height: auto; /* maintain aspect ratio */
+	object-fit: cover; /* cover the box without distortion */
+}
+
+/* CHAT GPT FIT NORWAY IMAGE */
+
 .w-layout-grid {
 	grid-row-gap: 16px;
 	grid-column-gap: 16px;

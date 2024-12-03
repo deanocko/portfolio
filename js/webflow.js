@@ -606,22 +606,22 @@
 								this.auto &&
 									(this.el.style[this.name] == "auto" && (this.update(this.get()), this.redraw()),
 									s == "auto" && (s = r.call(this))),
-								(this.nextStyle = s);
+									(this.nextStyle = s));
 						}),
 						(e.fallback = function (s) {
 							var O = this.el.style[this.name] || this.convert(this.get(), this.type);
 							(s = this.convert(s, this.type)),
 								this.auto &&
 									(O == "auto" && (O = this.convert(this.get(), this.type)), s == "auto" && (s = r.call(this))),
-								(this.tween = new R({
-									from: O,
-									to: s,
-									duration: this.duration,
-									delay: this.delay,
-									ease: this.ease,
-									update: this.update,
-									context: this,
-								}));
+									(this.tween = new R({
+										from: O,
+										to: s,
+										duration: this.duration,
+										delay: this.delay,
+										ease: this.ease,
+										update: this.update,
+										context: this,
+									}));
 						}),
 						(e.get = function () {
 							return p(this.el, this.name);
@@ -1114,66 +1114,6 @@
 				}),
 				(t.defer = function (u) {
 					return t.delay.apply(t, [u, 1].concat(W.call(arguments, 1)));
-				}),
-				(t.throttle = function (u) {
-					var l, E, b;
-					return function () {
-						l ||
-							((l = !0),
-							(E = arguments),
-							(b = this),
-							qt.frame(function () {
-								(l = !1), u.apply(b, E);
-							}));
-					};
-				}),
-				(t.debounce = function (u, l, E) {
-					var b,
-						P,
-						D,
-						c,
-						y,
-						k = function () {
-							var h = t.now() - c;
-							h < l ? (b = setTimeout(k, l - h)) : ((b = null), E || ((y = u.apply(D, P)), (D = P = null)));
-						};
-					return function () {
-						(D = this), (P = arguments), (c = t.now());
-						var h = E && !b;
-						return b || (b = setTimeout(k, l)), h && ((y = u.apply(D, P)), (D = P = null)), y;
-					};
-				}),
-				(t.defaults = function (u) {
-					if (!t.isObject(u)) return u;
-					for (var l = 1, E = arguments.length; l < E; l++) {
-						var b = arguments[l];
-						for (var P in b) u[P] === void 0 && (u[P] = b[P]);
-					}
-					return u;
-				}),
-				(t.keys = function (u) {
-					if (!t.isObject(u)) return [];
-					if (Q) return Q(u);
-					var l = [];
-					for (var E in u) t.has(u, E) && l.push(E);
-					return l;
-				}),
-				(t.has = function (u, l) {
-					return J.call(u, l);
-				}),
-				(t.isObject = function (u) {
-					return u === Object(u);
-				}),
-				(t.now =
-					Date.now ||
-					function () {
-						return new Date().getTime();
-					}),
-				(t.templateSettings = {
-					evaluate: /<%([\s\S]+?)%>/g,
-					interpolate: /<%=([\s\S]+?)%>/g,
-					escape: /<%-([\s\S]+?)%>/g,
-				});
 			var he = /(.)^/,
 				ve = { "'": "'", "\\": "\\", "\r": "r", "\n": "n", "\u2028": "u2028", "\u2029": "u2029" },
 				Ce = /\\|'|\r|\n|\u2028|\u2029/g,
@@ -2682,3 +2622,47 @@ __p+='`),
  * Underscore may be freely distributed under the MIT license.
  * @license MIT
  */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const menuButton = document.querySelector('.menu-button');
+    const navMenu = document.querySelector('.w-nav-menu');
+    
+    if (menuButton && navMenu) {
+        menuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle menu button state
+            menuButton.classList.toggle('w--open');
+            
+            // Toggle menu visibility
+            navMenu.classList.toggle('w--open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menuButton.contains(e.target) && !navMenu.contains(e.target)) {
+                menuButton.classList.remove('w--open');
+                navMenu.classList.remove('w--open');
+            }
+        });
+
+        // Close menu when clicking a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuButton.classList.remove('w--open');
+                navMenu.classList.remove('w--open');
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 991) {
+                menuButton.classList.remove('w--open');
+                navMenu.classList.remove('w--open');
+            }
+        });
+    }
+});

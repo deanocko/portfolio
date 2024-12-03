@@ -141,12 +141,11 @@ table {
 /* CHAT GPT FIT NORWAY IMAGE */
 
 .w-layout-grid {
-	grid-row-gap: 16px;
-	grid-column-gap: 16px;
-	grid-template-rows: auto auto;
-	grid-template-columns: 1fr 1fr;
-	grid-auto-columns: 1fr;
-	display: grid;
+	display: grid; /* Creates a CSS grid container */
+	grid-auto-columns: 1fr; /* Sets automatic column width to equal fractions */
+	grid-template-rows: auto; /* Allows rows to size based on content */
+	grid-row-gap: 16px; /* Sets vertical spacing between grid items */
+	grid-column-gap: 16px; /* Sets horizontal spacing between grid items */
 }
 
 body {
@@ -1339,16 +1338,6 @@ figcaption {
 	padding: 20px;
 }
 
-/* .div-block-3 > div:first-child {
-	flex: 1;
-	max-width: 60%;
-	padding-right: 20px;
-}
-
-.div-block-3 > div:last-child {
-	flex: 0 0 auto;
-} */
-
 .image-4 {
 	width: 30vw;
 	max-width: 400px;
@@ -2456,4 +2445,98 @@ html {
 /* Ensure proper scroll padding for fixed header */
 html {
 	scroll-padding-top: 100px; /* Adjust this value based on your header height */
+}
+
+.flex-center-vertical {
+	display: flex; /* Enables flexbox layout container */
+	flex-direction: column; /* Stacks child elements vertically */
+	justify-content: center; /* Centers child elements vertically in container */
+	height: 100%; /* Makes container take up full height of parent */
+	align-items: flex-start; /* Aligns items to left edge of container */
+	max-width: 100%; /* Prevents content from overflowing container width */
+}
+
+.flex-center-vertical .paragraph-light {
+	max-width: 100%; /* Prevents text from stretching beyond container */
+}
+
+.flex-center-vertical .button {
+	width: auto; /* Allows button to size based on content */
+}
+
+/* Center aligned heading */
+.heading-4.center {
+	text-align: center; /* Centers the heading text horizontally */
+}
+
+/* Large grid item spanning 2x2 */
+.project-card.large {
+	grid-column: span 2; /* Makes card span 2 columns in grid */
+	grid-row: span 2; /* Makes card span 2 rows in grid */
+}
+
+.w-layout-grid {
+	display: grid; /* Creates a CSS grid container */
+	grid-auto-columns: 1fr; /* Sets automatic column width to equal fractions */
+	grid-template-rows: auto; /* Allows rows to size based on content */
+	grid-row-gap: 16px; /* Sets vertical spacing between grid items */
+	grid-column-gap: 16px; /* Sets horizontal spacing between grid items */
+}
+
+.project-grid {
+	grid-template-columns: 1fr 1fr; /* Creates 2 equal-width columns */
+	margin-top: 24px; /* Adds space above the grid */
+	margin-bottom: 80px; /* Adds space below the grid */
+	grid-row-gap: 24px; /* Sets vertical gap between projects */
+	grid-column-gap: 24px; /* Sets horizontal gap between projects */
+}
+
+.project-card {
+	display: flex; /* Enables flexbox for card layout */
+	flex-direction: column; /* Stacks card content vertically */
+	background-color: #fff; /* Sets white background for cards */
+	border-radius: 8px; /* Rounds card corners */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+	transition: transform 0.3s; /* Smooth transform animation on hover */
+}
+
+.project-card:hover {
+	transform: translateY(-4px); /* Lifts card slightly on hover */
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhances shadow on hover */
+}
+
+.project-name {
+	margin: 16px 0; /* Adds vertical spacing around project name */
+	font-size: 24px; /* Sets project name text size */
+	font-weight: 600; /* Makes project name semi-bold */
+	color: #333; /* Sets dark gray color for project name */
+}
+
+.text-block-4 {
+	color: #666; /* Sets medium gray color for description */
+	line-height: 1.6; /* Improves readability of description text */
+	margin-bottom: 16px; /* Adds space below description */
+}
+
+.image-6 {
+	width: 100%; /* Makes image fill card width */
+	height: auto; /* Maintains image aspect ratio */
+	border-radius: 8px 8px 0 0; /* Rounds top corners of image */
+	object-fit: cover; /* Ensures image covers area without distortion */
+}
+
+.div-block-6 {
+	padding: 20px; /* Adds internal spacing in card content area */
+}
+
+@media screen and (max-width: 767px) {
+	.project-grid {
+		grid-template-columns: 1fr; /* Switches to single column on mobile */
+		margin-bottom: 40px; /* Reduces bottom margin on mobile */
+	}
+
+	.project-card.large {
+		grid-column: span 1; /* Makes large cards single column on mobile */
+		grid-row: span 1; /* Makes large cards single row on mobile */
+	}
 }

@@ -2447,3 +2447,13 @@ figcaption {
 		grid-area: 1 / 1 / 2 / 2;
 	}
 }
+
+/* Add smooth scrolling to HTML and body elements */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Ensure proper scroll padding for fixed header */
+html {
+	scroll-padding-top: 100px; /* Adjust this value based on your header height */
+}

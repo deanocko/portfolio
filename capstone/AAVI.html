@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" data-wf-page="646399e0a1bace702c764b54" data-wf-site="63dbf0d7a8c0be3a7f72bfa2">
+<html lang="en">
 	<head>
-		<!-- Google tag (gtag.js) -->
+		<!-- Google Analytics Tracking -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-51KB5CWB9T"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -9,24 +9,21 @@
 				dataLayer.push(arguments);
 			}
 			gtag("js", new Date());
-
 			gtag("config", "G-51KB5CWB9T");
 		</script>
 
+		<!-- Basic Meta Tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Automatic Aircraft Visual Inspection (AAVI)</title>
-
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content="Automatic Aircraft Visual Inspection (AAVI)" />
-		<meta property="twitter:title" content="Automatic Aircraft Visual Inspection (AAVI)" />
+		<title>Automatic Aircraft Visual Inspection - Dean Ockenden</title>
+		<meta name="description" content="Capstone project on automated aircraft defect detection using YOLO-NAS" />
 
 		<!-- Stylesheets -->
 		<link href="../css/normalize.css" rel="stylesheet" />
 		<link href="../css/webflow.css" rel="stylesheet" />
 		<link href="../css/my-portfolio-b69f64.webflow.css" rel="stylesheet" />
 
-		<!-- Fonts -->
+		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -44,19 +41,10 @@
 		<!-- Favicon -->
 		<link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 		<link href="../images/webclip.png" rel="apple-touch-icon" />
-
-		<!-- Webflow Script -->
-		<script>
-			!(function (o, c) {
-				var n = c.documentElement,
-					t = " w-mod-";
-				(n.className += t + "js"),
-					("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch");
-			})(window, document);
-		</script>
 	</head>
 
 	<body class="body">
+		<!-- Navigation Bar -->
 		<nav
 			class="navigation w-nav"
 			data-collapse="medium"
@@ -67,9 +55,12 @@
 			role="banner"
 		>
 			<div class="navigation-items">
+				<!-- Logo -->
 				<a href="../index.html" class="logo-link w-nav-brand">
 					<div class="title-logo">dean<span class="text-span-3">ocko</span></div>
 				</a>
+
+				<!-- Navigation Menu -->
 				<div class="navigation-wrap">
 					<nav role="navigation" class="navigation-items w-nav-menu">
 						<a href="../index.html#Resume" class="navigation-item w-nav-link">Resume</a>
@@ -77,6 +68,8 @@
 						<a href="../index.html#Projects" class="navigation-item w-nav-link">Projects</a>
 						<a href="../index.html#Contact" class="navigation-item w-nav-link">Contact</a>
 					</nav>
+
+					<!-- Mobile Menu Button -->
 					<div class="menu-button w-nav-button">
 						<img width="22" src="../images/menu-icon_1menu-icon.png" alt="Menu" class="menu-icon" />
 					</div>
@@ -85,52 +78,72 @@
 		</nav>
 
 		<!-- Main Content -->
-		<main class="container">
-			<section class="section">
-				<!-- Project Header -->
-				<div id="w-node-_1fbc5cc0-415e-248f-a623-c3ac54a3828d-54a3828b" class="title-and-subject">
-					<h1 class="heading-jumbo">Automatic Aircraft Visual Inspection (AAVI)</h1>
-					<p class="paragraph-light mobile">
-						My capstone project and the culmination of my Bachelor of Mechatronic Engineering (Honours) degree.
-					</p>
+		<main>
+			<!-- Project Header -->
+			<div class="section cc-store-home-wrap">
+				<div class="intro-header cc-subpage">
+					<div class="intro-content">
+						<div class="heading-jumbo">Automatic Aircraft Visual Inspection (AAVI)<br /></div>
+					</div>
 				</div>
+			</div>
 
-				<!-- Project Image -->
-				<figure class="image-video-div">
-					<img src="../images/sustainable.webp" alt="AAVI Project Visualization" class="image" />
-				</figure>
-
-				<!-- Spacer -->
-				<div style="height: 40px"></div>
-
-				<!-- Project Details -->
-				<div class="content-container" style="max-width: 800px; margin: 0 auto; padding: 0 20px">
-					<article class="project-overview">
-						<h2 class="body subheading mobile">
-							Using CNNs and deep learning to automate the aircraft general visual inspection process.
-						</h2>
-						<div class="paragraph-light mobile">
-							<p>To be completed</p>
-							<p>to be completed</p>
-							<p>to be completed</p>
-
-							<section class="references">
-								<h2>References</h2>
-								<ul>
-									<li>example</li>
-									<li>example</li>
-									<li>example</li>
-								</ul>
-							</section>
+			<!-- Project Content -->
+			<div class="section">
+				<div class="container">
+					<!-- Project Image -->
+					<div class="blog-detail-header-wrap">
+						<div class="blog-detail-header-image-wrap">
+							<img
+								src="../images/sustainable.webp"
+								loading="lazy"
+								alt="AAVI Project Preview"
+								class="blog-detail-header-image"
+							/>
 						</div>
-					</article>
-				</div>
+						<div class="spacer-40"></div>
+					</div>
 
-				<!-- Navigation Button -->
-				<div class="explore-projects-button-div">
-					<a href="https://deanocko.com#Projects" class="button w-button">Explore My Other Projects</a>
+					<!-- Project Description -->
+					<div class="w-richtext">
+						<h2>Project Overview</h2>
+						<p>
+							The Automatic Aircraft Visual Inspection (AAVI) project represents a significant advancement in
+							automated defect detection for aircraft maintenance. Using the state-of-the-art YOLO-NAS (You Only
+							Look Once - Neural Architecture Search) model, this system achieves unprecedented accuracy in
+							identifying various types of aircraft defects.
+						</p>
+
+						<h2>Technical Implementation</h2>
+						<p>Key technical aspects of the project include:</p>
+						<ul>
+							<li>Implementation of YOLO-NAS CNN architecture</li>
+							<li>Custom dataset creation and annotation</li>
+							<li>Real-time defect detection capabilities</li>
+							<li>Edge device deployment optimization</li>
+							<li>Comprehensive performance evaluation framework</li>
+						</ul>
+
+						<h2>Results and Impact</h2>
+						<p>The project achieved several significant outcomes:</p>
+						<ul>
+							<li>Best-in-class detection accuracy compared to existing literature</li>
+							<li>Real-time processing capabilities suitable for industrial deployment</li>
+							<li>Successful validation on diverse aircraft defect types</li>
+							<li>Potential for significant cost reduction in aircraft maintenance</li>
+						</ul>
+
+						<h2>Future Development</h2>
+						<p>Ongoing and future development areas include:</p>
+						<ul>
+							<li>Integration with automated maintenance systems</li>
+							<li>Expansion of the defect detection categories</li>
+							<li>Enhancement of edge device performance</li>
+							<li>Development of a comprehensive deployment framework</li>
+						</ul>
+					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 
 		<!-- Scripts -->

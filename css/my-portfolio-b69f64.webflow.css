@@ -467,22 +467,28 @@ figcaption {
 	letter-spacing: 2px;
 	text-transform: none;
 	background-color: #2fa153;
-	border: 2px solid rgba(0, 0, 0, 0);
+	border: 2px solid transparent;
 	border-radius: 50px;
 	padding: 15px 25px;
 	font-size: 18px;
 	line-height: 20px;
-	transition: background-color 0.4s, opacity 0.4s, color 0.4s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transform: translateY(0);
+	transition: all 0.3s ease;
 }
 
 .button:hover {
 	color: #fff;
 	background-color: #52ce5f;
 	border: 2px solid #000;
+	transform: translateY(-4px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button:active {
 	background-color: #43464d;
+	transform: translateY(-2px);
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12);
 }
 
 .button.cc-jumbo-button {
@@ -1256,7 +1262,7 @@ figcaption {
 .projects-button {
 	color: #000;
 	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, 0);
+	border: 1px solid transparent;
 	border-radius: 0;
 	margin-top: 30px;
 	margin-bottom: 75px;
@@ -1264,13 +1270,17 @@ figcaption {
 	font-family: Manrope, sans-serif;
 	font-size: 34px;
 	font-weight: 300;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transform: translateY(0);
+	transition: all 0.3s ease;
 }
 
 .projects-button:hover {
 	color: #fff;
 	background-color: #1fcf0f;
-	border-width: 2px;
-	border-color: #000;
+	border: 2px solid #000;
+	transform: translateY(-4px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .section-3 {
@@ -1584,12 +1594,11 @@ figcaption {
 }
 
 .contact-section {
-	padding-top: 50px;
-	padding-bottom: 300px;
-}
-
-.heading-2 {
-	padding-bottom: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0;
 }
 
 .div-block-9 {
@@ -1597,13 +1606,26 @@ figcaption {
 	justify-content: center;
 	align-items: center;
 	display: flex;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.heading-3 {
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 40px;
 }
 
 .div-block-10 {
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 	display: flex;
+}
+
+.div-block-10:last-child {
+	margin-bottom: 0;
 }
 
 .tech-and-skills {
@@ -2182,6 +2204,12 @@ figcaption {
 		padding: 10px 8px;
 		font-size: 14px;
 		line-height: 20px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
 	}
 
 	.navigation {
@@ -2539,4 +2567,23 @@ html {
 		grid-column: span 1; /* Makes large cards single column on mobile */
 		grid-row: span 1; /* Makes large cards single row on mobile */
 	}
+}
+
+/* Contact button container */
+.div-block-10 {
+	justify-content: center; /* Center buttons horizontally */
+	align-items: center; /* Center buttons vertically */
+	margin-bottom: 20px; /* Reduced spacing between buttons */
+	display: flex; /* Use flexbox layout */
+}
+
+/* Last button container (remove bottom margin) */
+.div-block-10:last-child {
+	margin-bottom: 0; /* Remove margin from last button */
+}
+
+/* Contact section spacing */
+.contact-section {
+	padding-top: 50px; /* Space above contact section */
+	padding-bottom: 100px; /* Space below contact section */
 }

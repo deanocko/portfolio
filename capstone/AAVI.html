@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-wf-page="646399e0a1bace702c764b54" data-wf-site="63dbf0d7a8c0be3a7f72bfa2">
 	<head>
-		<!-- Google Analytics Tracking -->
+		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-51KB5CWB9T"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -9,21 +9,24 @@
 				dataLayer.push(arguments);
 			}
 			gtag("js", new Date());
+
 			gtag("config", "G-51KB5CWB9T");
 		</script>
 
-		<!-- Basic Meta Tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Automatic Aircraft Visual Inspection - Dean Ockenden</title>
-		<meta name="description" content="Capstone project on automated aircraft defect detection using YOLO-NAS" />
+		<title>Automatic Aircraft Visual Inspection</title>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Automatic Aircraft Visual Inspection" />
+		<meta property="twitter:title" content="Automatic Aircraft Visual Inspection" />
 
 		<!-- Stylesheets -->
 		<link href="../css/normalize.css" rel="stylesheet" />
 		<link href="../css/webflow.css" rel="stylesheet" />
 		<link href="../css/my-portfolio-b69f64.webflow.css" rel="stylesheet" />
 
-		<!-- Google Fonts -->
+		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -41,10 +44,154 @@
 		<!-- Favicon -->
 		<link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 		<link href="../images/webclip.png" rel="apple-touch-icon" />
+
+		<style>
+			.content-wrapper {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.project-container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 40px 0;
+			}
+
+			.title-section {
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
+			.title-section .heading-jumbo {
+				margin-bottom: 0;
+				line-height: 1.1;
+			}
+
+			.title-section .paragraph-light {
+				font-size: 1.2em;
+				opacity: 0.8;
+				margin-top: 5px;
+			}
+
+			.video-container {
+				margin: 0 auto 40px;
+				position: relative;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+
+			.video-container .video {
+				width: 100%;
+				position: relative;
+				padding-top: 51.43%;
+			}
+
+			.video-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 6px;
+			}
+
+			.project-content {
+				margin: 0 auto;
+			}
+
+			.project-overview,
+			.tech-and-skills,
+			.methodology,
+			.results {
+				background: #ffffff;
+				padding: 30px;
+				border-radius: 12px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+			}
+
+			.tech-section {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+				margin-top: 20px;
+			}
+
+			.tech-category {
+				background: #f8f9fa;
+				padding: 20px;
+				border-radius: 12px;
+				transition: all 0.3s ease;
+			}
+
+			.tech-category:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.tech-category h3 {
+				font-size: 1.1em;
+				color: #333;
+				margin-bottom: 15px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #e9ecef;
+			}
+
+			.tech-items {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.tech-item {
+				padding: 8px 12px;
+				background: white;
+				border-radius: 6px;
+				font-size: 14px;
+				transition: all 0.2s ease;
+				border: 1px solid #e9ecef;
+			}
+
+			.tech-item:hover {
+				background: #f1f3f5;
+				transform: translateX(5px);
+			}
+
+			.methodology ul,
+			.results ul {
+				padding-left: 20px;
+				margin-top: 10px;
+			}
+
+			.methodology li,
+			.results li {
+				margin-bottom: 8px;
+				line-height: 1.6;
+			}
+
+			@media screen and (max-width: 991px) {
+				.tech-section {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media screen and (max-width: 767px) {
+				.tech-section {
+					grid-template-columns: 1fr;
+				}
+
+				.title-section .heading-jumbo {
+					font-size: 2.5em;
+				}
+			}
+		</style>
 	</head>
 
 	<body class="body">
-		<!-- Navigation Bar -->
 		<nav
 			class="navigation w-nav"
 			data-collapse="medium"
@@ -55,12 +202,9 @@
 			role="banner"
 		>
 			<div class="navigation-items">
-				<!-- Logo -->
 				<a href="../index.html" class="logo-link w-nav-brand">
 					<div class="title-logo">dean<span class="text-span-3">ocko</span></div>
 				</a>
-
-				<!-- Navigation Menu -->
 				<div class="navigation-wrap">
 					<nav role="navigation" class="navigation-items w-nav-menu">
 						<a href="../index.html#Resume" class="navigation-item w-nav-link">Resume</a>
@@ -68,8 +212,6 @@
 						<a href="../index.html#Projects" class="navigation-item w-nav-link">Projects</a>
 						<a href="../index.html#Contact" class="navigation-item w-nav-link">Contact</a>
 					</nav>
-
-					<!-- Mobile Menu Button -->
 					<div class="menu-button w-nav-button">
 						<img width="22" src="../images/menu-icon_1menu-icon.png" alt="Menu" class="menu-icon" />
 					</div>
@@ -78,71 +220,111 @@
 		</nav>
 
 		<!-- Main Content -->
-		<main>
-			<!-- Project Header -->
-			<div class="section cc-store-home-wrap">
-				<div class="intro-header cc-subpage">
-					<div class="intro-content">
-						<div class="heading-jumbo">Automatic Aircraft Visual Inspection (AAVI)<br /></div>
-					</div>
-				</div>
-			</div>
+		<main class="container">
+			<div class="content-wrapper">
+				<section class="section">
+					<div class="project-container">
+						<!-- Project Header -->
+						<div class="title-section">
+							<h1 class="heading-jumbo">AAVI</h1>
+							<p class="paragraph-light">Automatic Aircraft Visual Inspection</p>
+						</div>
 
-			<!-- Project Content -->
-			<div class="section">
-				<div class="container">
-					<!-- Project Image -->
-					<div class="blog-detail-header-wrap">
-						<div class="blog-detail-header-image-wrap">
+						<!-- Project Video -->
+						<div class="video-container">
 							<img
-								src="../images/sustainable.webp"
-								loading="lazy"
-								alt="AAVI Project Preview"
-								class="blog-detail-header-image"
+								src="../images/AAVI.png"
+								alt="Automatic Aircraft Visual Inspection System"
+								style="width: 100%; height: auto; border-radius: 6px"
 							/>
 						</div>
-						<div class="spacer-40"></div>
+
+						<!-- Project Details -->
+						<div class="project-content">
+							<!-- Project Overview -->
+							<article class="project-overview">
+								<h2 class="body subheading mobile">Project Overview</h2>
+								<p class="paragraph-light mobile">
+									The Automatic Aircraft Visual Inspection (AAVI) project represents a significant advancement
+									in automated defect detection for aircraft maintenance. Using state-of-the-art YOLO-NAS (You
+									Only Look Once - Neural Architecture Search) technology, this system achieves unprecedented
+									accuracy in identifying various types of aircraft surface defects.<br /><br />
+									This innovative solution addresses the critical need for efficient and reliable aircraft
+									inspection processes, potentially reducing inspection time while maintaining or improving
+									accuracy.
+								</p>
+							</article>
+
+							<!-- Technologies and Skills -->
+							<article class="tech-and-skills">
+								<h2 class="body subheading mobile">Technologies and Skills</h2>
+								<div class="tech-section">
+									<div class="tech-category">
+										<h3>Core Technologies</h3>
+										<div class="tech-items">
+											<div class="tech-item">YOLO-NAS</div>
+											<div class="tech-item">Python</div>
+											<div class="tech-item">PyTorch</div>
+										</div>
+									</div>
+									<div class="tech-category">
+										<h3>ML & CV</h3>
+										<div class="tech-items">
+											<div class="tech-item">Deep Learning</div>
+											<div class="tech-item">Computer Vision</div>
+											<div class="tech-item">Object Detection</div>
+										</div>
+									</div>
+									<div class="tech-category">
+										<h3>Tools & Frameworks</h3>
+										<div class="tech-items">
+											<div class="tech-item">Super-Gradients</div>
+											<div class="tech-item">OpenCV</div>
+											<div class="tech-item">CUDA</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<!-- Methodology -->
+							<article class="methodology">
+								<h2 class="body subheading mobile">Methodology</h2>
+								<p class="paragraph-light mobile">
+									The project followed a comprehensive approach to develop and validate the automated inspection
+									system:
+								</p>
+								<ul class="paragraph-light mobile">
+									<li>Custom dataset creation with detailed annotation of aircraft surface defects</li>
+									<li>Implementation of YOLO-NAS architecture with optimized parameters</li>
+									<li>Extensive model training with data augmentation techniques</li>
+									<li>Real-time inference optimization for practical deployment</li>
+									<li>Rigorous testing and validation using diverse test cases</li>
+								</ul>
+							</article>
+
+							<!-- Results -->
+							<article class="results">
+								<h2 class="body subheading mobile">Results & Impact</h2>
+								<p class="paragraph-light mobile">
+									The project achieved significant outcomes that demonstrate its potential for industry
+									application:
+								</p>
+								<ul class="paragraph-light mobile">
+									<li>Superior detection accuracy compared to existing methods</li>
+									<li>Real-time processing capabilities suitable for industrial deployment</li>
+									<li>Successful validation on diverse defect types</li>
+									<li>Potential for significant cost reduction in aircraft maintenance</li>
+									<li>Framework for future expansion and improvement</li>
+								</ul>
+							</article>
+						</div>
+
+						<!-- Navigation Button -->
+						<div class="explore-projects-button-div" style="margin-top: 40px; text-align: center">
+							<a href="../index.html#Projects" class="button w-button">Explore My Other Projects</a>
+						</div>
 					</div>
-
-					<!-- Project Description -->
-					<div class="w-richtext">
-						<h2>Project Overview</h2>
-						<p>
-							The Automatic Aircraft Visual Inspection (AAVI) project represents a significant advancement in
-							automated defect detection for aircraft maintenance. Using the state-of-the-art YOLO-NAS (You Only
-							Look Once - Neural Architecture Search) model, this system achieves unprecedented accuracy in
-							identifying various types of aircraft defects.
-						</p>
-
-						<h2>Technical Implementation</h2>
-						<p>Key technical aspects of the project include:</p>
-						<ul>
-							<li>Implementation of YOLO-NAS CNN architecture</li>
-							<li>Custom dataset creation and annotation</li>
-							<li>Real-time defect detection capabilities</li>
-							<li>Edge device deployment optimization</li>
-							<li>Comprehensive performance evaluation framework</li>
-						</ul>
-
-						<h2>Results and Impact</h2>
-						<p>The project achieved several significant outcomes:</p>
-						<ul>
-							<li>Best-in-class detection accuracy compared to existing literature</li>
-							<li>Real-time processing capabilities suitable for industrial deployment</li>
-							<li>Successful validation on diverse aircraft defect types</li>
-							<li>Potential for significant cost reduction in aircraft maintenance</li>
-						</ul>
-
-						<h2>Future Development</h2>
-						<p>Ongoing and future development areas include:</p>
-						<ul>
-							<li>Integration with automated maintenance systems</li>
-							<li>Expansion of the defect detection categories</li>
-							<li>Enhancement of edge device performance</li>
-							<li>Development of a comprehensive deployment framework</li>
-						</ul>
-					</div>
-				</div>
+				</section>
 			</div>
 		</main>
 

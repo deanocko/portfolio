@@ -546,35 +546,35 @@ figcaption {
 	color: #727272;
 	letter-spacing: 1px;
 	text-transform: none;
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, 0);
-	padding-top: 10px;
-	padding-bottom: 9px;
+	background-color: transparent;
+	border: 2px solid transparent;
+	border-radius: 30px;
+	padding: 10px 20px;
 	font-family: Manrope, sans-serif;
 	font-size: 20px;
 	font-weight: 300;
 	line-height: 20px;
 	position: static;
+	transform: translateY(0);
+	transition: all 0.3s ease;
 }
 
 .navigation-item:hover {
-	border: 1px solid #000;
-	border-radius: 0;
+	color: #2fa153;
+	border-color: #2fa153;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .navigation-item:active {
-	opacity: 0.8;
+	transform: translateY(-1px);
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12);
 }
 
 .navigation-item.w--current {
-	opacity: 1;
 	color: #000;
 	font-weight: 500;
-}
-
-.navigation-item.w--current:active {
-	opacity: 0.7;
-	color: #32343a;
+	opacity: 1;
 }
 
 .navigation-item.inverted {
@@ -1063,20 +1063,27 @@ figcaption {
 }
 
 .title-logo {
-	-webkit-text-stroke-color: #28971e;
 	text-transform: none;
-	white-space: normal;
-	border: 1px solid rgba(0, 0, 0, 0);
-	padding: 10px;
 	font-family: Manrope, sans-serif;
 	font-size: 30px;
 	font-weight: 200;
+	padding: 10px 20px;
+	border: 2px solid transparent;
+	border-radius: 30px;
+	transform: translateY(0);
+	transition: all 0.3s ease;
 }
 
 .title-logo:hover {
-	border: 1px solid #000;
-	border-radius: 0;
-	padding: 10px;
+	color: #2fa153;
+	border-color: #2fa153;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.title-logo:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12);
 }
 
 .columns {
@@ -1383,11 +1390,11 @@ figcaption {
 
 .image-6 {
 	width: 100%;
-	height: 70%;
+	height: 255px;
 	object-fit: cover;
-	border-radius: 0;
-	position: static;
+	border-radius: 6px 6px 0 0;
 	overflow: hidden;
+	display: block;
 }
 
 .div-block-5 {
@@ -1398,26 +1405,24 @@ figcaption {
 }
 
 .div-block-5.project-card {
-	max-height: 50vh;
-	border: 2px solid rgba(0, 0, 0, 0);
-	padding: 30px 15px;
+	max-height: none;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	padding: 0;
 	text-decoration: none;
 	overflow: hidden;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
 }
 
 .div-block-5.project-card:hover {
 	border: 2px solid #000;
-	border-radius: 5px;
+	transform: translateY(-4px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .div-block-6 {
-	min-width: 100%;
-	flex-direction: column;
-	align-items: stretch;
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-right: 0;
-	display: flex;
+	padding: 20px 15px;
 }
 
 .landing-section {
@@ -2534,27 +2539,31 @@ html {
 }
 
 .project-name {
-	margin: 16px 0; /* Adds vertical spacing around project name */
-	font-size: 24px; /* Sets project name text size */
-	font-weight: 600; /* Makes project name semi-bold */
-	color: #333; /* Sets dark gray color for project name */
+	margin: 5px 0 2px 0; /* Added space above title */
+	font-size: 22px; /* Keep same size */
+	font-weight: 600; /* Keep same weight */
+	color: #333; /* Keep same color */
+	line-height: 1.2; /* Keep tight line height */
 }
 
-.text-block-4 {
-	color: #666; /* Sets medium gray color for description */
-	line-height: 1.6; /* Improves readability of description text */
-	margin-bottom: 16px; /* Adds space below description */
+.text-block-4.text-block-5 {
+	margin: 0 0 5px 0; /* Added space below description */
+	color: #666; /* Keep same color */
+	line-height: 1.3; /* Keep tight line height */
+	font-size: 15px; /* Keep same size */
 }
 
 .image-6 {
-	width: 100%; /* Makes image fill card width */
-	height: auto; /* Maintains image aspect ratio */
-	border-radius: 8px 8px 0 0; /* Rounds top corners of image */
-	object-fit: cover; /* Ensures image covers area without distortion */
+	width: 100%; /* Full width */
+	height: 255px; /* Standard height */
+	object-fit: cover; /* Cover container without distortion */
+	border-radius: 6px 6px 0 0; /* Slightly smaller radius for nested element */
+	overflow: hidden; /* Contain the image */
+	display: block; /* Remove any extra space */
 }
 
 .div-block-6 {
-	padding: 20px; /* Adds internal spacing in card content area */
+	padding: 20px 15px; /* More padding top/bottom */
 }
 
 @media screen and (max-width: 767px) {
@@ -2586,4 +2595,86 @@ html {
 .contact-section {
 	padding-top: 50px; /* Space above contact section */
 	padding-bottom: 100px; /* Space below contact section */
+}
+
+/* Navigation item styles for index page */
+.w--current.navigation-item {
+	color: #000; /* Black text for current page */
+	letter-spacing: 1px; /* Letter spacing */
+	padding: 10px 20px; /* Comfortable padding */
+	font-size: 20px; /* Text size */
+	font-weight: 300; /* Light weight */
+	background-color: transparent; /* Transparent background */
+	border: 2px solid transparent; /* Transparent border */
+	border-radius: 30px; /* Rounded corners */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	transform: translateY(0); /* Starting position */
+	transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Navigation item hover effects - applies to all pages */
+.w--current.navigation-item:hover {
+	color: #2fa153; /* Green text on hover */
+	border-color: #2fa153; /* Green border */
+	transform: translateY(-2px); /* Slight lift */
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow appears on hover */
+}
+
+/* Navigation item active state - applies to all pages */
+.w--current.navigation-item:active {
+	transform: translateY(-1px); /* Less lift when clicked */
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12); /* Medium shadow */
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 479px) {
+	.w--current.navigation-item {
+		padding: 8px 16px; /* Smaller padding */
+		font-size: 16px; /* Smaller text */
+	}
+
+	.w--current.navigation-item:hover {
+		transform: translateY(-1px); /* Smaller lift on mobile */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12); /* Smaller hover shadow */
+	}
+}
+
+/* Capstone project card specific styles */
+.div-block-5.project-card.large {
+	grid-column: 1 / -1; /* Span all columns */
+}
+
+/* Capstone project image */
+.div-block-5.project-card.large .image-6 {
+	height: 382px; /* 150% of standard height (255px) */
+}
+
+/* Capstone project content */
+.div-block-5.project-card.large .div-block-6 {
+	padding: 25px 20px; /* Larger padding for capstone */
+}
+
+.div-block-5.project-card.large .project-name {
+	font-size: 26px; /* Larger title for capstone */
+	margin: 8px 0 4px 0; /* More spacing for capstone title */
+}
+
+.div-block-5.project-card.large .text-block-4.text-block-5 {
+	font-size: 16px; /* Larger text for capstone */
+	margin: 0 0 8px 0; /* More spacing below capstone description */
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 479px) {
+	.div-block-6 {
+		padding: 15px 12px; /* Slightly less padding on mobile */
+	}
+
+	.div-block-5.project-card.large .image-6 {
+		height: 255px; /* Same as standard on mobile */
+	}
+
+	.div-block-5.project-card.large .div-block-6 {
+		padding: 20px 15px; /* Less padding on mobile */
+	}
 }

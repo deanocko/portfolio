@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-wf-page="646399e0a1bace702c764b54" data-wf-site="63dbf0d7a8c0be3a7f72bfa2">
 	<head>
-		<!-- Google Analytics Tracking -->
+		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-51KB5CWB9T"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -9,21 +9,24 @@
 				dataLayer.push(arguments);
 			}
 			gtag("js", new Date());
+
 			gtag("config", "G-51KB5CWB9T");
 		</script>
 
-		<!-- Basic Meta Tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Missile Interceptor - Dean Ockenden</title>
-		<meta name="description" content="Flight simulator project implementing missile interception algorithms" />
+		<title>Missile Interceptor</title>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Missile Interceptor" />
+		<meta property="twitter:title" content="Missile Interceptor" />
 
 		<!-- Stylesheets -->
 		<link href="../css/normalize.css" rel="stylesheet" />
 		<link href="../css/webflow.css" rel="stylesheet" />
 		<link href="../css/my-portfolio-b69f64.webflow.css" rel="stylesheet" />
 
-		<!-- Google Fonts -->
+		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -41,10 +44,19 @@
 		<!-- Favicon -->
 		<link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 		<link href="../images/webclip.png" rel="apple-touch-icon" />
+
+		<!-- Webflow Script -->
+		<script>
+			!(function (o, c) {
+				var n = c.documentElement,
+					t = " w-mod-";
+				(n.className += t + "js"),
+					("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch");
+			})(window, document);
+		</script>
 	</head>
 
 	<body class="body">
-		<!-- Navigation Bar -->
 		<nav
 			class="navigation w-nav"
 			data-collapse="medium"
@@ -55,12 +67,9 @@
 			role="banner"
 		>
 			<div class="navigation-items">
-				<!-- Logo -->
 				<a href="../index.html" class="logo-link w-nav-brand">
 					<div class="title-logo">dean<span class="text-span-3">ocko</span></div>
 				</a>
-
-				<!-- Navigation Menu -->
 				<div class="navigation-wrap">
 					<nav role="navigation" class="navigation-items w-nav-menu">
 						<a href="../index.html#Resume" class="navigation-item w-nav-link">Resume</a>
@@ -68,8 +77,6 @@
 						<a href="../index.html#Projects" class="navigation-item w-nav-link">Projects</a>
 						<a href="../index.html#Contact" class="navigation-item w-nav-link">Contact</a>
 					</nav>
-
-					<!-- Mobile Menu Button -->
 					<div class="menu-button w-nav-button">
 						<img width="22" src="../images/menu-icon_1menu-icon.png" alt="Menu" class="menu-icon" />
 					</div>
@@ -78,82 +85,66 @@
 		</nav>
 
 		<!-- Main Content -->
-		<main>
-			<!-- Project Header -->
-			<div class="section cc-store-home-wrap">
-				<div class="intro-header cc-subpage">
-					<div class="intro-content">
-						<div class="heading-jumbo">Missile Interceptor<br /></div>
+		<main class="container">
+			<section class="section">
+				<!-- Project Header -->
+				<div id="w-node-de837f6e-232d-2e6a-d6e8-617ac5c688c2-c5c688c0" class="title-and-subject">
+					<h1 class="heading-jumbo">Missile Interceptor</h1>
+					<p class="paragraph-light mobile">Programming for Mechatronic Systems</p>
+				</div>
+
+				<!-- Project Video -->
+				<div class="video-container">
+					<div style="padding-top: 56.17021276595745%" class="video w-video w-embed">
+						<iframe
+							class="embedly-embed"
+							src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FmXjN9HvLYsw%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DmXjN9HvLYsw&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FmXjN9HvLYsw%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube"
+							width="940"
+							height="528"
+							scrolling="no"
+							allowfullscreen
+							title="Missile Interceptor"
+						></iframe>
 					</div>
 				</div>
-			</div>
 
-			<!-- Project Content -->
-			<div class="section">
-				<div class="container">
-					<!-- Project Image -->
-					<div class="blog-detail-header-wrap">
-						<div class="blog-detail-header-image-wrap">
-							<img
-								src="../images/flightSimulator.webp"
-								loading="lazy"
-								alt="Flight Simulator Project Preview"
-								class="blog-detail-header-image"
-							/>
-						</div>
-						<div class="spacer-40"></div>
-					</div>
-
-					<!-- Project Description -->
-					<div class="w-richtext">
-						<h2>Project Overview</h2>
-						<p>
-							The Missile Interceptor project is a sophisticated flight simulation system developed for the
-							Programming for Mechatronic Systems course. It implements advanced algorithms for missile tracking and
-							interception in a 3D environment.
+				<!-- Project Details -->
+				<div class="content-container" style="max-width: 800px; margin: 0 auto; padding: 0 20px">
+					<!-- Project Overview -->
+					<article class="project-overview">
+						<h2 class="body subheading mobile">Project Overview</h2>
+						<p class="paragraph-light mobile">
+							The Missile Interceptor project is a C++ application that simulates a missile defense system. The
+							program uses object-oriented programming principles and multithreading to create an interactive
+							simulation where missiles are launched and intercepted in real-time.<br /><br />
+							The simulation features multiple threads handling different aspects: missile generation, user input,
+							display updates, and collision detection. The program demonstrates advanced C++ concepts including
+							inheritance, polymorphism, and thread synchronization.
 						</p>
+					</article>
 
-						<h2>Technical Implementation</h2>
-						<p>Key technical features include:</p>
-						<ul>
-							<li>Object-oriented C++ architecture</li>
-							<li>Multi-threaded processing for real-time simulation</li>
-							<li>3D physics engine integration</li>
-							<li>Advanced collision detection algorithms</li>
-							<li>Real-time trajectory calculation</li>
+					<!-- Technologies and Skills -->
+					<article id="w-node-de837f6e-232d-2e6a-d6e8-617ac5c688d8-c5c688c0" class="tech-and-skills">
+						<h2 class="body subheading mobile">Technologies and Skills</h2>
+						<ul class="paragraph-light mobile" style="list-style: none; padding-left: 0">
+							<li>- C++</li>
+							<li>- Object Oriented Programming</li>
+							<li>- Multithreading</li>
+							<li>- Real-time Simulation</li>
+							<li>- Thread Synchronization</li>
+							<li>- Collision Detection</li>
 						</ul>
-
-						<h2>Development Process</h2>
-						<p>The project was developed through several phases:</p>
-						<ul>
-							<li>System architecture design</li>
-							<li>Physics engine implementation</li>
-							<li>Threading and synchronization</li>
-							<li>User interface development</li>
-							<li>Performance optimization</li>
-						</ul>
-
-						<h2>Results and Achievements</h2>
-						<p>The project achieved significant outcomes:</p>
-						<ul>
-							<li>Successful missile tracking and interception</li>
-							<li>Real-time performance with complex calculations</li>
-							<li>Robust error handling and system stability</li>
-							<li>High Distinction grade in Programming for Mechatronic Systems</li>
-						</ul>
-
-						<h2>Skills Demonstrated</h2>
-						<p>This project showcased expertise in:</p>
-						<ul>
-							<li>Advanced C++ programming</li>
-							<li>Object-oriented design patterns</li>
-							<li>Multi-threaded application development</li>
-							<li>3D mathematics and physics</li>
-							<li>Performance optimization techniques</li>
-						</ul>
-					</div>
+					</article>
 				</div>
-			</div>
+
+				<!-- Spacer -->
+				<div style="height: 40px"></div>
+
+				<!-- Navigation Button -->
+				<div class="explore-projects-button-div">
+					<a href="../index.html#Projects" class="button w-button">Explore My Other Projects</a>
+				</div>
+			</section>
 		</main>
 
 		<!-- Scripts -->

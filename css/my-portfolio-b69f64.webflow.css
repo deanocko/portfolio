@@ -136,6 +136,7 @@ table {
 	width: 33.33%;
 	height: auto; /* maintain aspect ratio */
 	object-fit: cover; /* cover the box without distortion */
+	border-radius: 8px;
 }
 
 /* CHAT GPT FIT NORWAY IMAGE */
@@ -1132,6 +1133,7 @@ figcaption {
 	background-image: url("../images/Coruna.webp");
 	background-position: 0 0;
 	background-size: contain;
+	border-radius: 8px;
 }
 
 .text-span {
@@ -1140,6 +1142,7 @@ figcaption {
 
 .image-2 {
 	object-fit: contain;
+	border-radius: 8px;
 }
 
 .div-block {
@@ -1388,26 +1391,26 @@ figcaption {
 	text-decoration: none;
 }
 
-.image-6 {
+.project-image {
 	width: 100%;
 	height: 255px;
 	object-fit: cover;
-	border-radius: 6px 6px 0 0;
+	/* border-radius: 0 0 10px 10px; */
 	overflow: hidden;
 	display: block;
 }
 
-.div-block-5 {
+.flex-column-start {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 	display: flex;
 }
 
-.div-block-5.project-card {
+.flex-column-start.project-card {
 	max-height: none;
-	border: 2px solid transparent;
-	border-radius: 8px;
+	border: 3px solid transparent;
+	/* border-radius: 10px; */
 	padding: 0;
 	text-decoration: none;
 	overflow: hidden;
@@ -1415,8 +1418,8 @@ figcaption {
 	box-sizing: border-box;
 }
 
-.div-block-5.project-card:hover {
-	border: 2px solid #000;
+.flex-column-start.project-card:hover {
+	border: 3px solid #2fa153;
 	transform: translateY(-4px);
 	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -2097,7 +2100,7 @@ figcaption {
 		font-size: 14px;
 	}
 
-	.div-block-5.project-card {
+	.flex-column-start.project-card {
 		padding: 10px;
 	}
 }
@@ -2213,11 +2216,11 @@ html {
 	font-size: 15px; /* Keep same size */
 }
 
-.image-6 {
+.project-image {
 	width: 100%; /* Full width */
 	height: 255px; /* Standard height */
 	object-fit: cover; /* Cover container without distortion */
-	border-radius: 6px 6px 0 0; /* Slightly smaller radius for nested element */
+	border-radius: 0 0 10px 10px; /* Slightly smaller radius for nested element */
 	overflow: hidden; /* Contain the image */
 	display: block; /* Remove any extra space */
 }
@@ -2300,26 +2303,26 @@ html {
 }
 
 /* Capstone project card specific styles */
-.div-block-5.project-card.large {
+.flex-column-start.project-card.large {
 	grid-column: 1 / -1; /* Span all columns */
 }
 
 /* Capstone project image */
-.div-block-5.project-card.large .image-6 {
+.flex-column-start.project-card.large .project-image {
 	height: 382px; /* 150% of standard height (255px) */
 }
 
 /* Capstone project content */
-.div-block-5.project-card.large .div-block-6 {
+.flex-column-start.project-card.large .div-block-6 {
 	padding: 25px 20px; /* Larger padding for capstone */
 }
 
-.div-block-5.project-card.large .project-name {
+.flex-column-start.project-card.large .project-name {
 	font-size: 26px; /* Larger title for capstone */
 	margin: 8px 0 4px 0; /* More spacing for capstone title */
 }
 
-.div-block-5.project-card.large .text-block-4.text-block-5 {
+.flex-column-start.project-card.large .text-block-4.text-block-5 {
 	font-size: 16px; /* Larger text for capstone */
 	margin: 0 0 8px 0; /* More spacing below capstone description */
 }
@@ -2330,11 +2333,11 @@ html {
 		padding: 15px 12px; /* Slightly less padding on mobile */
 	}
 
-	.div-block-5.project-card.large .image-6 {
+	.flex-column-start.project-card.large .project-image {
 		height: 255px; /* Same as standard on mobile */
 	}
 
-	.div-block-5.project-card.large .div-block-6 {
+	.flex-column-start.project-card.large .div-block-6 {
 		padding: 20px 15px; /* Less padding on mobile */
 	}
 }

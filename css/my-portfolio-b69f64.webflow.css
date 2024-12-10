@@ -2523,4 +2523,11 @@ html {
 	letter-spacing: 1px;
 	text-transform: none;
 	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.w-nav-menu .navigation-item.w-nav-link:hover {
+	color: #2fa153 !important;
+	border-color: #2fa153;
+	transform: translateY(-2px);
 }

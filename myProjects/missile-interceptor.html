@@ -44,139 +44,6 @@
 		<!-- Favicon -->
 		<link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 		<link href="../images/webclip.png" rel="apple-touch-icon" />
-
-		<style>
-			.content-wrapper {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 0;
-				width: 100%;
-			}
-
-			.project-container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 40px 0;
-			}
-
-			.title-section {
-				margin-bottom: 40px;
-				text-align: center;
-			}
-
-			.title-section .heading-jumbo {
-				margin-bottom: 0;
-				line-height: 1.1;
-			}
-
-			.title-section .paragraph-light {
-				font-size: 1.2em;
-				opacity: 0.8;
-				margin-top: 5px;
-			}
-
-			.video-container {
-				margin: 0 auto 40px;
-				position: relative;
-				width: 100%;
-				display: flex;
-				justify-content: center;
-			}
-
-			.video-container .video {
-				width: 100%;
-				position: relative;
-				padding-top: 51.43%; /* 35:18 aspect ratio */
-			}
-
-			.video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 6px;
-				width: calc(100% - 12px);
-				height: 100%;
-				border: none;
-				border-radius: 6px;
-			}
-
-			.project-content {
-				margin: 0 auto;
-			}
-
-			.project-overview,
-			.tech-and-skills,
-			.methodology,
-			.results {
-				background: #ffffff;
-				padding: 30px;
-				border-radius: 12px;
-				margin-bottom: 30px;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-			}
-
-			.tech-section {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 20px;
-				margin-top: 20px;
-			}
-
-			.tech-category {
-				background: #f8f9fa;
-				padding: 20px;
-				border-radius: 12px;
-			}
-
-			.tech-category h3 {
-				font-size: 1.1em;
-				color: #333;
-				margin-bottom: 15px;
-				padding-bottom: 10px;
-				border-bottom: 2px solid #e9ecef;
-			}
-
-			.tech-items {
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
-			}
-
-			.tech-item {
-				padding: 8px 12px;
-				background: white;
-				border-radius: 6px;
-				font-size: 14px;
-				border: 1px solid #e9ecef;
-			}
-
-			.methodology ul,
-			.results ul {
-				padding-left: 20px;
-				margin-top: 10px;
-			}
-
-			.methodology li,
-			.results li {
-				margin-bottom: 8px;
-				line-height: 1.6;
-			}
-
-			@media screen and (max-width: 991px) {
-				.tech-section {
-					grid-template-columns: repeat(2, 1fr);
-				}
-			}
-
-			@media screen and (max-width: 767px) {
-				.tech-section {
-					grid-template-columns: 1fr;
-				}
-
-				.title-section .heading-jumbo {
-					font-size: 2.5em;
-				}
-			}
-		</style>
 	</head>
 
 	<body class="body">
@@ -241,8 +108,8 @@
 									<li>The red arrow represents my aircraft</li>
 									<li>The green arrows represent the bogies</li>
 									<li>
-										The blue arrows represent the bogies' calculated point of interception between my aircraft
-										and the bogies
+										The blue arrows represent the calculated point of interception between my aircraft and the
+										bogies
 									</li>
 								</ul>
 								<p class="paragraph-light mobile">
@@ -262,9 +129,8 @@
 									for basic functionality, our program had to intercept the bogies when they were randomly
 									generated within the flight area but were held stationary. Advanced functionality was awarded
 									for intercepting the bogies when they were moving at different, unknown velocities. Bonus
-									marks were awarded for the top 3 students in the subject that intercepted the most bogies
-									within the 3 minutes time frame and was to be tested by the tutors in a fair testing
-									environment.
+									marks were awarded for the top 3 students in the subject whose implementation intercepted the
+									most bogies in a fair testing environment.
 									<br /><br />
 
 									We were only able to control the linear and angular velocity of our 'aircraft' and these were
@@ -275,11 +141,10 @@
 									<br /><br />
 
 									First, I broke the assignment down into parts. Using the available variables I designed a
-									flight controller that allowed my aircraft to spend as much time as possible at maximum
-									velocity. This meant that the aircraft would make turns as quickly as possible to then
-									accelerate to maximum linear velocity. Whilst at maximum velocity, only gradual turns were
-									allowed which maintained the aircraft at max velocity. To pursue an aircraft, the flight
-									controller simply attempted to minimise the bearing between the aircraft and the bogy.
+									flight controller that allowed my aircraft to spend as much time as possible at maximum linear
+									velocity by turning as fast as possible until the bearing of the friendly aircraft was within
+									15 degrees of the bogy. To pursue a bogy, the flight controller simply attempted to minimise
+									the bearing between the aircraft and the bogy.
 									<br /><br />
 
 									Secondly, I used the measurements provided to me to determine the absolute location of the
@@ -289,8 +154,8 @@
 									<br /><br />
 
 									Thirdly, I used a struct to encapsulate all of the relevant data about bogies into a single
-									variable and pushed them into a queue. I then sorted the queue to order the bogies in terms of
-									minimum time of interception. Using multithreading, this would be continually calculated
+									variable and pushed them into a vector. I then sorted the vector to order the bogies in terms
+									of minimum time of interception. Using multithreading, this would be continually calculated
 									multiple times per second.
 									<br /><br />
 
@@ -318,7 +183,12 @@
 									interceptions and received bonus marks.
 									<br /><br />
 								</p>
+							</article>
+
+							<!-- Potential Improvements -->
+							<article class="project-overview">
 								<h2 class="body subheading mobile">Potential Improvements</h2>
+
 								<p class="paragraph-light mobile">
 									To further improve my design I could have implemented a graph search to decide the shortest
 									route to pursue all bogies within the frame.
@@ -334,9 +204,10 @@
 										<div class="tech-items">
 											<div class="tech-item">C++</div>
 											<div class="tech-item">Object Oriented Programming</div>
+											<div class="tech-item">Data Structures and Algorithms</div>
 											<div class="tech-item">Multithreading</div>
-											<div class="tech-item">Data Structures and Algorithms (DSA)</div>
 											<div class="tech-item">G Testing</div>
+											<div class="tech-item">Ubuntu</div>
 										</div>
 									</div>
 									<!-- <div class="tech-category">
@@ -356,36 +227,6 @@
 										</div>
 									</div> -->
 								</div>
-							</article>
-
-							<!-- Methodology -->
-							<article class="methodology">
-								<h2 class="body subheading mobile">Methodology</h2>
-								<p class="paragraph-light mobile">
-									The project followed a systematic approach to develop and validate the defense system:
-								</p>
-								<ul class="paragraph-light mobile">
-									<li>Implementation of real-time object detection and tracking</li>
-									<li>Development of trajectory prediction algorithms</li>
-									<li>Integration of servo control systems</li>
-									<li>Optimization of response time and accuracy</li>
-									<li>Extensive testing under various conditions</li>
-								</ul>
-							</article>
-
-							<!-- Results -->
-							<article class="results">
-								<h2 class="body subheading mobile">Results & Impact</h2>
-								<p class="paragraph-light mobile">
-									The project achieved significant outcomes that demonstrate its effectiveness:
-								</p>
-								<ul class="paragraph-light mobile">
-									<li>High accuracy in projectile detection and tracking</li>
-									<li>Fast response time for interceptor deployment</li>
-									<li>Reliable performance under different lighting conditions</li>
-									<li>Successful interception of projectiles at various speeds</li>
-									<li>Framework for future improvements and applications</li>
-								</ul>
 							</article>
 						</div>
 

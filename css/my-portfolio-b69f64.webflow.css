@@ -2446,8 +2446,7 @@ html {
 }
 
 .tech-section {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
 	gap: 20px;
 	margin-top: 20px;
 }
@@ -2456,6 +2455,7 @@ html {
 	background: #f8f9fa;
 	padding: 20px;
 	border-radius: 12px;
+	flex: 1;
 }
 
 .tech-category h3 {
@@ -2526,7 +2526,10 @@ html {
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
 	.tech-section {
-		grid-template-columns: repeat(2, 1fr);
+		flex-wrap: wrap;
+	}
+	.tech-category {
+		flex-basis: calc(50% - 10px); /* 50% width minus half the gap */
 	}
 }
 
@@ -2545,5 +2548,9 @@ html {
 
 	.title-section .heading-jumbo {
 		font-size: 2.5em;
+	}
+
+	.tech-category {
+		flex-basis: 100%;
 	}
 }

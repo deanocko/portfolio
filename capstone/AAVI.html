@@ -44,139 +44,6 @@
 		<!-- Favicon -->
 		<link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 		<link href="../images/webclip.png" rel="apple-touch-icon" />
-
-		<style>
-			.content-wrapper {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 0;
-				width: 100%;
-			}
-
-			.project-container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 40px 0;
-			}
-
-			.title-section {
-				margin-bottom: 40px;
-				text-align: center;
-			}
-
-			.title-section .heading-jumbo {
-				margin-bottom: 0;
-				line-height: 1.1;
-			}
-
-			.title-section .paragraph-light {
-				font-size: 1.2em;
-				opacity: 0.8;
-				margin-top: 5px;
-			}
-
-			.video-container {
-				margin: 0 auto 40px;
-				position: relative;
-				width: 100%;
-				display: flex;
-				justify-content: center;
-			}
-
-			.video-container .video {
-				width: 100%;
-				position: relative;
-				padding-top: 51.43%;
-			}
-
-			.video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				border: none;
-				border-radius: 6px;
-			}
-
-			.project-content {
-				margin: 0 auto;
-			}
-
-			.project-overview,
-			.tech-and-skills,
-			.methodology,
-			.results {
-				background: #ffffff;
-				padding: 30px;
-				border-radius: 12px;
-				margin-bottom: 30px;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-			}
-
-			.tech-section {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 20px;
-				margin-top: 20px;
-			}
-
-			.tech-category {
-				background: #f8f9fa;
-				padding: 20px;
-				border-radius: 12px;
-			}
-
-			.tech-category h3 {
-				font-size: 1.1em;
-				color: #333;
-				margin-bottom: 15px;
-				padding-bottom: 10px;
-				border-bottom: 2px solid #e9ecef;
-			}
-
-			.tech-items {
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
-			}
-
-			.tech-item {
-				padding: 8px 12px;
-				background: white;
-				border-radius: 6px;
-				font-size: 14px;
-				border: 1px solid #e9ecef;
-			}
-
-			.methodology ul,
-			.results ul {
-				padding-left: 20px;
-				margin-top: 10px;
-			}
-
-			.methodology li,
-			.results li {
-				margin-bottom: 8px;
-				line-height: 1.6;
-			}
-
-			@media screen and (max-width: 991px) {
-				.tech-section {
-					grid-template-columns: repeat(2, 1fr);
-				}
-			}
-
-			@media screen and (max-width: 767px) {
-				.tech-section {
-					grid-template-columns: 1fr;
-				}
-
-				.title-section .heading-jumbo {
-					font-size: 2.5em;
-				}
-			}
-		</style>
 	</head>
 
 	<body class="body">
@@ -217,13 +84,9 @@
 							<h1 class="heading-jumbo">Automatic Aircraft Visual Inspection (AAVI)</h1>
 						</div>
 
-						<!-- Project Video -->
-						<div class="video-container">
-							<img
-								src="../images/AAVI.png"
-								alt="Automatic Aircraft Visual Inspection System"
-								style="width: 100%; height: auto; border-radius: 6px"
-							/>
+						<!-- Project Image -->
+						<div class="image-container">
+							<img src="../images/AAVI.png" alt="Automatic Aircraft Visual Inspection System" />
 						</div>
 
 						<!-- Project Details -->
@@ -250,12 +113,12 @@
 										<h3>Core Technologies</h3>
 										<div class="tech-items">
 											<div class="tech-item">YOLO-NAS</div>
-											<div class="tech-item">Python</div>
 											<div class="tech-item">PyTorch</div>
+											<div class="tech-item">OpenCV</div>
 										</div>
 									</div>
 									<div class="tech-category">
-										<h3>ML & CV</h3>
+										<h3>Technical Skills</h3>
 										<div class="tech-items">
 											<div class="tech-item">Deep Learning</div>
 											<div class="tech-item">Computer Vision</div>
@@ -263,11 +126,11 @@
 										</div>
 									</div>
 									<div class="tech-category">
-										<h3>Tools & Frameworks</h3>
+										<h3>Additional Skills</h3>
 										<div class="tech-items">
-											<div class="tech-item">Roboflow</div>
-											<div class="tech-item">Super-Gradients</div>
-											<div class="tech-item">Ultralytics</div>
+											<div class="tech-item">Data Processing</div>
+											<div class="tech-item">Model Training</div>
+											<div class="tech-item">Performance Analysis</div>
 										</div>
 									</div>
 								</div>
@@ -277,37 +140,34 @@
 							<article class="methodology">
 								<h2 class="body subheading mobile">Methodology</h2>
 								<p class="paragraph-light mobile">
-									The project followed a comprehensive approach to develop and validate the automated inspection
-									system:
+									Our approach involved several key steps to develop and validate the AAVI system:
 								</p>
 								<ul class="paragraph-light mobile">
-									<li>Custom dataset creation with detailed annotation of aircraft surface defects</li>
-									<li>Implementation of YOLO-NAS architecture with optimized parameters</li>
-									<li>Extensive model training with data augmentation techniques</li>
-									<li>Real-time inference optimization for practical deployment</li>
-									<li>Rigorous testing and validation using diverse test cases</li>
+									<li>Dataset preparation with diverse aircraft surface defect images</li>
+									<li>Implementation of YOLO-NAS architecture for defect detection</li>
+									<li>Model training with optimized hyperparameters</li>
+									<li>Extensive testing and validation on real-world scenarios</li>
+									<li>Performance analysis and optimization</li>
 								</ul>
 							</article>
 
 							<!-- Results -->
 							<article class="results">
-								<h2 class="body subheading mobile">Results & Impact</h2>
+								<h2 class="body subheading mobile">Results</h2>
 								<p class="paragraph-light mobile">
-									The project achieved significant outcomes that demonstrate its potential for industry
-									application:
+									The AAVI system demonstrated exceptional performance in defect detection:
 								</p>
 								<ul class="paragraph-light mobile">
-									<li>Superior detection accuracy compared to existing methods</li>
-									<li>Real-time processing capabilities suitable for industrial deployment</li>
-									<li>Successful validation on diverse defect types</li>
-									<li>Potential for significant cost reduction in aircraft maintenance</li>
-									<li>Framework for future expansion and improvement</li>
+									<li>High accuracy in identifying various types of surface defects</li>
+									<li>Real-time processing capabilities</li>
+									<li>Robust performance under different lighting conditions</li>
+									<li>Significant reduction in inspection time compared to manual methods</li>
 								</ul>
 							</article>
 						</div>
 
 						<!-- Navigation Button -->
-						<div class="explore-projects-button-div" style="margin-top: 40px; text-align: center">
+						<div class="explore-projects-button-div">
 							<a href="../index.html#Projects" class="button w-button">Explore My Other Projects</a>
 						</div>
 					</div>

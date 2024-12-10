@@ -223,7 +223,7 @@
 							<div class="video w-video w-embed">
 								<iframe
 									class="embedly-embed"
-									src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FSFf-7Sivj3M%3Frel%3D0%26showinfo%3D0%26feature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSFf-7Sivj3M&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FSFf-7Sivj3M%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube"
+									src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FSFf-7Sivj3M%3Frel%3D0%26showinfo%3D0%26modestbranding%3D1%26feature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSFf-7Sivj3M&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FSFf-7Sivj3M%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube"
 									scrolling="no"
 									allowfullscreen
 									title="Missile Interceptor Project"
@@ -235,14 +235,86 @@
 						<div class="project-content">
 							<!-- Project Overview -->
 							<article class="project-overview">
+								<h2 class="body subheading mobile">Summary</h2>
+
+								<ul class="paragraph-light mobile">
+									<li>The red arrow represents my aircraft</li>
+									<li>The green arrows represent the bogies</li>
+									<li>
+										The blue arrows represent the calculated point of interception between my aircraft and the
+										bogies
+									</li>
+									<li>Basic functionality: Intercept stationary bogies</li>
+									<li>Advanced functionality: Intercept bogies in random directions and unknown velocities</li>
+									<li>Bonus Marks: Be in the top 3 students to intercept the most bogies within 3 minutes</li>
+								</ul>
+
 								<h2 class="body subheading mobile">Project Overview</h2>
 								<p class="paragraph-light mobile">
-									The Missile Interceptor project demonstrates an autonomous defense system capable of detecting
-									and intercepting incoming projectiles in real-time. Using computer vision and precise control
-									systems, the system tracks projectile trajectories and deploys countermeasures with high
-									accuracy.<br /><br />
-									This project showcases the integration of real-time object tracking, trajectory prediction,
-									and automated response systems in a challenging dynamic environment.
+									In this assignment we were tasked with intercepting the maximum amount of 'bogies' within a 3
+									minute time frame. To be awarded marks for basic functionality, our program had to intercept
+									the bogies when they were randomly generated within the flight area but were held stationary.
+									Advanced functionality was awarded for intercepting the bogies when they were moving at
+									different velocities. Bonus marks were awarded for the top 3 students in the subject that
+									intercepted the most bogies within the 3 minutes time frame and was to be tested by the tutors
+									in a fair testing environment.
+									<br /><br />
+
+									We were only able to control the linear and angular velocity of our 'aircraft' and these were
+									zero-sum in that, to achieve maximal linear or angular velocity we would have to sacrifice the
+									other. To locate the bogies we were limited to the bearing and range of each bogy relative to
+									our aircraft and the location of our aircraft relative to a static base station which was
+									centered in the middle of the flight area.
+									<br /><br />
+
+									First, I broke the assignment down into parts. Using the available variables I designed a
+									flight controller that allowed my aircraft to spend as much time as possible at maximum
+									velocity. This meant that the aircraft would make turns as quickly as possible to then
+									accelerate to maximum linear velocity. Whilst at maximum velocity, only gradual turns were
+									allowed which maintained the aircraft at max velocity. To pursue an aircraft, the flight
+									controller simply attempted to minimise the bearing between the aircraft and the bogy.
+									<br /><br />
+
+									Secondly, I used the measurements provided to me to determine the absolute location of the
+									bogies and my aircraft. Following this, I created a function which calculated the time to
+									intercept each bogy which factored in both the distance and time required to make the turn to
+									a certain position in the flight space.
+									<br /><br />
+
+									Thirdly, I used a struct to encapsulate all of the relevant data about bogies into a single
+									variable and pushed them into a queue. I then sorted the queue to order the bogies in terms of
+									minimum time of interception. Using multithreading, this would be continually calculated
+									multiple times per second.
+									<br /><br />
+
+									With all of this complete, my program already achieved both basic and advanced functionality
+									without any changes required in configuration, however, I wanted to improve on my system. As
+									the bogies flew on straight paths and at constant, although unknown, velocity, my idea was to
+									store the previous bogie positions and time intervals to calculate the future position of the
+									bogie. This would allow my flight controller to predict the interception point and straighten
+									the flight path of my aircraft to minimise interception time. Ultimately, this proved far more
+									difficult than I realised and I spent many days squashing bugs before I was finally able to
+									get it working.
+									<br /><br />
+
+									The results, however, paid off and the implementation was much more efficient than a standard
+									implementation. After getting my results back, I was in the top three students in terms of
+									interceptions and received bonus marks, however, we weren't told which students achieved the
+									best results.
+									<br /><br />
+
+									The actual bogy locations are shown in the video using the green marker. My implementation
+									displays the blue markers as the the point at which my aircraft could intercept each
+									respective bogy. Due to predicting the interception point, my flight controller could
+									straighten the flight paths of my aircraft which meant it could intercept more bogies in a
+									given timeframe than a standard implementation. I was in the top three students in terms of
+									interceptions and received bonus marks.
+									<br /><br />
+								</p>
+								<h2 class="body subheading mobile">Potential Improvements</h2>
+								<p class="paragraph-light mobile">
+									To further improve my design I could have implemented a graph search to decide the shortest
+									route to pursue all bogies within the frame.
 								</p>
 							</article>
 

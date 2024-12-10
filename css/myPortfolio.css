@@ -2681,3 +2681,20 @@ body {
 [data-theme="dark"] .paragraph-light {
 	color: #ffffff !important;
 }
+
+/* Landing section showcase image styles */
+.landing-showcase-image {
+	width: 87%;
+	margin-left: 20px;
+}
+
+/* Landing section paragraph styles */
+.landing-paragraph {
+	margin-left: 20px;
+}
+
+/* Project navigation button container */
+.explore-projects-button-container {
+	margin-top: 40px;
+	text-align: center;
+}

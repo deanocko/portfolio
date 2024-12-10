@@ -276,6 +276,10 @@ figcaption {
 	line-height: 26px;
 }
 
+.left-align {
+	text-align: left;
+}
+
 .heading-jumbo-small {
 	text-transform: none;
 	margin-top: 10px;

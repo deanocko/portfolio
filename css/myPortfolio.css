@@ -2517,14 +2517,14 @@ html {
 }
 
 [data-theme="dark"] {
-	--background-color: #1a1b1f;
-	--text-color: #ffffff;
-	--nav-background: rgba(26, 27, 31, 0.98);
-	--card-background: #1a1b1f;
+	--background-color: #121212;
+	--text-color: #d4d4d4; /* Light grey */
+	--nav-background: rgba(18, 18, 18, 0.98);
+	--card-background: #121212;
 	--card-shadow: rgba(0, 0, 0, 0.3);
-	--nav-item-color: #e0e0e0;
+	--nav-item-color: #d4d4d4; /* Light grey */
 	--nav-item-hover: #4cdb7f;
-	--logo-color: #ffffff;
+	--logo-color: #d4d4d4; /* Light grey */
 }
 
 /* Dark Mode Toggle Button */
@@ -2625,11 +2625,15 @@ body {
 
 /* Project Text Colors */
 [data-theme="dark"] .project-name {
-	color: #ffffff !important;
+	color: #d4d4d4 !important; /* Light grey */
 }
 
 [data-theme="dark"] .text-block-4,
 [data-theme="dark"] .text-block-5,
-[data-theme="dark"] .paragraph-light {
-	color: #ffffff !important;
+[data-theme="dark"] .paragraph-light,
+[data-theme="dark"] .heading,
+[data-theme="dark"] .heading-4,
+[data-theme="dark"] .intro-heading,
+[data-theme="dark"] .heading-1 {
+	color: #d4d4d4 !important; /* Light grey */
 }

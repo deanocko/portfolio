@@ -2366,17 +2366,30 @@ html {
 }
 
 .tech-category {
-	background: #f8f9fa;
+	background-color: var(--card-background);
+	transition: all 0.3s ease;
 	padding: 20px;
-	border-radius: 12px;
+	border-radius: 8px;
+}
+
+[data-theme="dark"] .tech-category {
+	background-color: var(--card-background);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tech-item {
-	padding: 8px 12px;
-	background: white;
-	border-radius: 6px;
-	font-size: 14px;
-	border: 1px solid #e9ecef;
+	background-color: var(--card-background);
+	color: var(--text-color);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+	padding: 8px 16px;
+	margin: 4px;
+	border-radius: 4px;
+}
+
+[data-theme="dark"] .tech-item {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: #d4d4d4;
 }
 
 /* Project Pages Styles */
@@ -2437,11 +2450,23 @@ html {
 }
 
 .project-bubble {
-	background: #ffffff;
-	padding: 30px;
-	border-radius: 12px;
-	margin-bottom: 30px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	background-color: var(--card-background);
+	transition: all 0.3s ease;
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+[data-theme="dark"] .project-bubble {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .body.subheading,
+[data-theme="dark"] .heading-jumbo,
+[data-theme="dark"] .paragraph-light.mobile,
+[data-theme="dark"] .paragraph-light.mobile strong,
+[data-theme="dark"] .paragraph-light.mobile li {
+	color: #d4d4d4 !important;
 }
 
 .tech-section {
@@ -2478,6 +2503,14 @@ html {
 	font-size: 14px;
 	border: 1px solid #e9ecef;
 	text-align: center;
+	background-color: var(--card-background);
+	color: var(--text-color);
+	transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .tech-item {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: #d4d4d4;
 }
 
 .methodology ul,

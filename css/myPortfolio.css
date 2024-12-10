@@ -2370,11 +2370,18 @@ html {
 	transition: all 0.3s ease;
 	padding: 20px;
 	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] .tech-category {
 	background-color: var(--card-background);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tech-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 }
 
 .tech-item {
@@ -2383,13 +2390,13 @@ html {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease;
 	padding: 8px 16px;
-	margin: 4px;
 	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] .tech-item {
-	border: 1px solid rgba(255, 255, 255, 0.1);
 	color: #d4d4d4;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Project Pages Styles */
@@ -2455,10 +2462,11 @@ html {
 	border-radius: 8px;
 	padding: 20px;
 	margin-bottom: 20px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] .project-bubble {
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] .body.subheading,
@@ -2480,6 +2488,7 @@ html {
 	background: #f8f9fa;
 	padding: 20px;
 	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .tech-category h3 {

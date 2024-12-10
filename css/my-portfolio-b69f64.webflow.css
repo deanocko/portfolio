@@ -277,7 +277,7 @@ figcaption {
 }
 
 .left-align {
-	text-align: left;
+	text-align: left !important;
 }
 
 .heading-jumbo-small {
@@ -406,6 +406,10 @@ figcaption {
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.4;
+}
+
+.paragraph-light strong {
+	font-weight: bold !important; /* or a specific weight like 600 or 700 */
 }
 
 .paragraph-light.cc-position-name {

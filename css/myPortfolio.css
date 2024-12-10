@@ -2517,14 +2517,14 @@ html {
 }
 
 [data-theme="dark"] {
-	--background-color: #121212;
-	--text-color: #d4d4d4; /* Light grey */
-	--nav-background: rgba(18, 18, 18, 0.98);
-	--card-background: #121212;
+	--background-color: #1a1b1f;
+	--text-color: #ffffff;
+	--nav-background: rgba(26, 27, 31, 0.98);
+	--card-background: #1a1b1f;
 	--card-shadow: rgba(0, 0, 0, 0.3);
-	--nav-item-color: #d4d4d4; /* Light grey */
+	--nav-item-color: #e0e0e0;
 	--nav-item-hover: #4cdb7f;
-	--logo-color: #d4d4d4; /* Light grey */
+	--logo-color: #ffffff;
 }
 
 /* Dark Mode Toggle Button */
@@ -2616,24 +2616,26 @@ body {
 }
 
 [data-theme="dark"] .project-card {
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: ;
+	border: 3px solid var(--card-background);
+	/* border: 3px solid rgba(255, 255, 255, 0.1); */
+	box-shadow: 0 4px 6px var(--card-shadow);
+	transition: all 0.3s ease;
 }
 
 [data-theme="dark"] .project-card:hover {
-	border-color: rgba(255, 255, 255, 0.2);
+	border: 3px solid •#2fa153;
+	transform: translateY (-4px);
+	box-shadow: 0 6px 8px Orgba(0, 0, 0, 0.15);
 }
 
 /* Project Text Colors */
 [data-theme="dark"] .project-name {
-	color: #d4d4d4 !important; /* Light grey */
+	color: #ffffff !important;
 }
 
 [data-theme="dark"] .text-block-4,
 [data-theme="dark"] .text-block-5,
-[data-theme="dark"] .paragraph-light,
-[data-theme="dark"] .heading,
-[data-theme="dark"] .heading-4,
-[data-theme="dark"] .intro-heading,
-[data-theme="dark"] .heading-1 {
-	color: #d4d4d4 !important; /* Light grey */
+[data-theme="dark"] .paragraph-light {
+	color: #ffffff !important;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" data-wf-page="646399e0a1bace702c764b54" data-wf-site="63dbf0d7a8c0be3a7f72bfa2">
+<html lang="en" data-wf-page="646399e0a1bace702c764b54" data-wf-site="63dbf0d7a8c0be3a7f72bfa2" data-theme="light">
 	<head>
-		<!-- Google tag (gtag.js) -->
+		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-51KB5CWB9T"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -9,22 +9,23 @@
 				dataLayer.push(arguments);
 			}
 			gtag("js", new Date());
-
 			gtag("config", "G-51KB5CWB9T");
 		</script>
 
+		<!-- Basic Meta Tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Automatic Aircraft Visual Inspection</title>
+		<title>AAVI</title>
 
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content="Automatic Aircraft Visual Inspection" />
-		<meta property="twitter:title" content="Automatic Aircraft Visual Inspection" />
+		<!-- Social Media Meta Tags -->
+		<meta property="og:title" content="AAVI" />
+		<meta property="twitter:title" content="AAVI" />
 
 		<!-- Stylesheets -->
-		<link href="../css/normalize.css" rel="stylesheet" />
-		<link href="../css/webflow.css" rel="stylesheet" />
-		<link href="../css/myPortfolio.css" rel="stylesheet" />
+		<link href="../css/variables.css" rel="stylesheet" type="text/css" />
+		<link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+		<link href="../css/webflow.css" rel="stylesheet" type="text/css" />
+		<link href="../css/myPortfolio.css" rel="stylesheet" type="text/css" />
 
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -47,6 +48,7 @@
 	</head>
 
 	<body class="body">
+		<!-- Navigation Bar -->
 		<nav
 			class="navigation w-nav"
 			data-collapse="medium"
@@ -66,6 +68,18 @@
 						<a href="../index.html#Capstone" class="navigation-item w-nav-link">Capstone</a>
 						<a href="../index.html#Projects" class="navigation-item w-nav-link">Projects</a>
 						<a href="../index.html#Contact" class="navigation-item w-nav-link">Contact</a>
+						<button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+							<svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path
+									class="moon"
+									d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
+								/>
+								<path
+									class="sun"
+									d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
+								/>
+							</svg>
+						</button>
 					</nav>
 					<div class="menu-button w-nav-button">
 						<img width="22" src="../images/menu-icon_1menu-icon.png" alt="Menu" class="menu-icon" />
@@ -81,53 +95,103 @@
 					<div class="project-container">
 						<!-- Project Header -->
 						<div class="title-section">
-							<h1 class="heading-jumbo">Automatic Aircraft Visual Inspection (AAVI)</h1>
+							<h1 class="heading-jumbo">Automatic Aircraft Visual Inspection</h1>
+							<p class="paragraph-light">Computer Vision & Deep Learning</p>
 						</div>
 
-						<!-- Project Image -->
-						<div class="image-container">
-							<img src="../images/AAVI.png" alt="Automatic Aircraft Visual Inspection System" />
+						<!-- Project Media -->
+						<div class="video-container">
+							<img
+								src="../images/AAVI.png"
+								loading="lazy"
+								alt="Automatic Aircraft Visual Inspection System"
+								style="
+									width: 100%;
+									height: auto;
+									display: block;
+									border-radius: 6px;
+									margin: 0 6px;
+									max-width: calc(100% - 12px);
+								"
+							/>
 						</div>
 
 						<!-- Project Details -->
 						<div class="project-content">
+							<!-- Summary -->
+							<article class="project-bubble summary">
+								<h2 class="body subheading mobile">Summary</h2>
+								<ul class="paragraph-light mobile left-align">
+									<li>Applied YOLO-NAS CNN model to automatically detect defects in aircraft imagery</li>
+									<li>Achieved the best results in the current literature for aircraft defect detection</li>
+									<li>Developed a system capable of real-time deployment on edge devices</li>
+								</ul>
+								<p class="paragraph-light mobile">
+									<strong>Core functionality:</strong> Automatic detection of aircraft surface defects ✅<br />
+									<strong>Advanced features:</strong> Real-time processing and edge deployment capabilities
+									✅<br />
+									<strong>Additional features:</strong> Best-in-class accuracy and performance metrics ✅<br />
+								</p>
+							</article>
+
 							<!-- Project Overview -->
-							<article class="project-overview">
+							<article class="project-bubble overview">
 								<h2 class="body subheading mobile">Project Overview</h2>
 								<p class="paragraph-light mobile">
 									The Automatic Aircraft Visual Inspection (AAVI) project represents a significant advancement
 									in automated defect detection for aircraft maintenance. Using state-of-the-art YOLO-NAS (You
 									Only Look Once - Neural Architecture Search) technology, this system achieves unprecedented
 									accuracy in identifying various types of aircraft surface defects.<br /><br />
+
 									This innovative solution addresses the critical need for efficient and reliable aircraft
 									inspection processes, potentially reducing inspection time while maintaining or improving
-									accuracy.
+									accuracy.<br /><br />
+
+									Our approach involved several key steps including dataset preparation with diverse aircraft
+									surface defect images, implementation of YOLO-NAS architecture for defect detection, model
+									training with optimized hyperparameters, extensive testing and validation on real-world
+									scenarios, and thorough performance analysis and optimization.
+								</p>
+							</article>
+
+							<!-- Results -->
+							<article class="project-bubble results">
+								<h2 class="body subheading mobile">Results</h2>
+								<p class="paragraph-light mobile">
+									The AAVI system demonstrated exceptional performance in defect detection, achieving the
+									highest accuracy rates reported in the current literature. The system successfully
+									demonstrated high accuracy in identifying various types of surface defects, real-time
+									processing capabilities, robust performance under different lighting conditions, and
+									significant reduction in inspection time compared to manual methods. These results validate
+									the effectiveness of our approach and its potential for real-world applications in aircraft
+									maintenance and safety inspection procedures.
+								</p>
+							</article>
+
+							<!-- Potential Improvements -->
+							<article class="project-bubble potential-improvements">
+								<h2 class="body subheading mobile">Potential Improvements</h2>
+								<p class="paragraph-light mobile">
+									Future enhancements could include expanding the system to handle a wider variety of aircraft
+									types and defect categories, implementing automated severity assessment for detected defects,
+									developing a more sophisticated tracking system for defect progression over time, and
+									integrating the system with existing maintenance management software for seamless workflow
+									integration.
 								</p>
 							</article>
 
 							<!-- Technologies and Skills -->
-							<article class="tech-and-skills">
-								<h2 class="body subheading mobile">Technologies and Skills</h2>
+							<article class="project-bubble technologies-and-skills">
+								<h2 class="body subheading mobile">Core Technologies and Skills</h2>
 								<div class="tech-section">
 									<div class="tech-category">
-										<h3>Core Technologies</h3>
 										<div class="tech-items">
 											<div class="tech-item">YOLO-NAS</div>
 											<div class="tech-item">PyTorch</div>
 											<div class="tech-item">OpenCV</div>
-										</div>
-									</div>
-									<div class="tech-category">
-										<h3>Technical Skills</h3>
-										<div class="tech-items">
 											<div class="tech-item">Deep Learning</div>
 											<div class="tech-item">Computer Vision</div>
 											<div class="tech-item">Object Detection</div>
-										</div>
-									</div>
-									<div class="tech-category">
-										<h3>Additional Skills</h3>
-										<div class="tech-items">
 											<div class="tech-item">Data Processing</div>
 											<div class="tech-item">Model Training</div>
 											<div class="tech-item">Performance Analysis</div>
@@ -135,39 +199,10 @@
 									</div>
 								</div>
 							</article>
-
-							<!-- Methodology -->
-							<article class="methodology">
-								<h2 class="body subheading mobile">Methodology</h2>
-								<p class="paragraph-light mobile">
-									Our approach involved several key steps to develop and validate the AAVI system:
-								</p>
-								<ul class="paragraph-light mobile">
-									<li>Dataset preparation with diverse aircraft surface defect images</li>
-									<li>Implementation of YOLO-NAS architecture for defect detection</li>
-									<li>Model training with optimized hyperparameters</li>
-									<li>Extensive testing and validation on real-world scenarios</li>
-									<li>Performance analysis and optimization</li>
-								</ul>
-							</article>
-
-							<!-- Results -->
-							<article class="results">
-								<h2 class="body subheading mobile">Results</h2>
-								<p class="paragraph-light mobile">
-									The AAVI system demonstrated exceptional performance in defect detection:
-								</p>
-								<ul class="paragraph-light mobile">
-									<li>High accuracy in identifying various types of surface defects</li>
-									<li>Real-time processing capabilities</li>
-									<li>Robust performance under different lighting conditions</li>
-									<li>Significant reduction in inspection time compared to manual methods</li>
-								</ul>
-							</article>
 						</div>
 
 						<!-- Navigation Button -->
-						<div class="explore-projects-button-div">
+						<div class="explore-projects-button-div explore-projects-button-container">
 							<a href="../index.html#Projects" class="button w-button">Explore My Other Projects</a>
 						</div>
 					</div>
@@ -182,5 +217,6 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="../js/webflow.js"></script>
+		<script src="../js/darkMode.js"></script>
 	</body>
 </html>

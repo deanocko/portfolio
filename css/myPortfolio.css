@@ -2411,7 +2411,7 @@ html {
 }
 
 .title-section {
-	max-width: 675px;
+	/* max-width: 675px; */
 	/* margin: 40px auto 0; */
 	padding: 30px;
 	text-align: center;

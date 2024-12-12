@@ -1682,6 +1682,10 @@ figcaption {
 	display: flex;
 }
 
+.centre-text {
+	text-align: center !important; /* Centres text horizontally */
+}
+
 .content-container {
 	flex-direction: column;
 	justify-content: space-between;

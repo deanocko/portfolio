@@ -1088,6 +1088,7 @@ figcaption {
 }
 
 .title-logo {
+	color: var(--logo-color);
 	text-transform: none;
 	font-family: Manrope, sans-serif;
 	font-size: 30px;
@@ -1095,17 +1096,12 @@ figcaption {
 	padding: 10px 20px;
 	border: 2px solid transparent;
 	border-radius: 30px;
-	transition: all 0.3s ease;
 }
 
 .title-logo:hover {
 	color: #2fa153;
 	border-color: #2fa153;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.title-logo:active {
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
 .columns {
@@ -2633,11 +2629,6 @@ body {
 .navigation {
 	background-color: var(--nav-background);
 	transition: background-color 0.3s ease;
-}
-
-.title-logo {
-	color: var(--logo-color);
-	transition: color 0.3s ease;
 }
 
 .navigation-item {

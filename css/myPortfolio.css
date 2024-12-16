@@ -1623,16 +1623,19 @@ figcaption {
 }
 
 .contact-section {
-	min-height: 100vh;
+	min-height: 65vh;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
-	padding: 35px 0;
+
+	/* padding: 35px 0; */
+	/* padding-top: 50px; Space above contact section */
+	padding-bottom: 20px; /* Space below contact section */
 }
 
 .div-block-9 {
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	display: flex;
 	width: 100%;
@@ -1678,7 +1681,8 @@ figcaption {
 	justify-content: center;
 	align-self: center;
 	align-items: center;
-	padding-bottom: 100px;
+	/* padding-bottom: 100px; */
+	padding-bottom: 20px;
 	display: flex;
 }
 
@@ -2277,12 +2281,6 @@ html {
 /* Last button container (remove bottom margin) */
 .div-block-10:last-child {
 	margin-bottom: 0; /* Remove margin from last button */
-}
-
-/* Contact section spacing */
-.contact-section {
-	padding-top: 50px; /* Space above contact section */
-	padding-bottom: 100px; /* Space below contact section */
 }
 
 /* Navigation item styles for index page */

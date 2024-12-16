@@ -183,17 +183,93 @@
 								</p>
 							</article>
 
+							<article class="project-bubble methodology">
+								<h1 class="body heading">Methodology</h1>
+								<p class="paragraph-light mobile">
+									The AAVI system combines hardware and software innovations to create a streamlined approach to
+									aircraft defect inspection. Its design centers around two components:
+									<br /><br />
+
+									1. Data Acquisition Network (DAN) The DAN employs a hybrid solution of drones and stationary
+									cameras to ensure thorough visual coverage of aircraft, even in challenging inspection areas.
+									Unmanned Aerial Vehicles (UAVs), such as DJI Matrice drones, scan the external and upper
+									surfaces, while stationary cameras focus on intricate areas like undercarriages and landing
+									gear. Images captured by the DAN are streamed in real-time for processing.
+									<br /><br />
+
+									2. Data Analysis and Sharing Hub (DASH) Captured image data is routed to DASH, which uses DCNN
+									models for defect detection. The first model performs Defect Detection in Real-Time (DDRT),
+									designed for speed and edge-device efficiency, such as GPU-enabled platforms. This is critical
+									for providing actionable insights within the 20–40 minute window between flights. The second
+									model, for Defect Detection Post-Hoc (DDPH), prioritizes high precision and recall, ensuring
+									even subtle defects not flagged by the real-time system are identified before the aircraft
+									Post-Hoc (DDPH), prioritizes high precision and recall, ensuring even subtle defects not
+									flagged by the real-time system are identified before the aircraft resumes operations.
+									<br /><br />
+
+									The methodology is bolstered by image-labeling mechanisms, allowing models to retrain and
+									adapt over time. Insights from failed inspections can propagate across systems worldwide,
+									continually refining the process. This adaptive design makes the system resilient and
+									future-proof, with potential applications in edge hardware scenarios, regulations adherence,
+									and evolving model architectures.
+								</p>
+
+								<h2 class="body subheading mobile">Dataset Creation and Composition</h2>
+								<p class="paragraph-light mobile">
+									To facilitate the training and evaluation of the AAVI models, a comprehensive dataset was
+									curated from six publicly available datasets, consisting of 4,492 images. After refinement,
+									this dataset focused on three defect classes—cracks, dents, and missing fasteners. A key
+									element of this work involved intensive cleaning, where duplicate images, augmented data, and
+									unsuitable images (e.g., video-game captures and misannotated photos) were filtered out.
+									<br /><br />
+
+									Class distributions revealed imbalances—missing fasteners were the most common (1,720
+									instances), while dents were underrepresented (915 instances). These limitations influenced
+									model performance but were mitigated through carefully designed augmentations.
+									<br /><br />
+
+									To improve robustness against variability in real-world inspections, augmentations were
+									applied, such as flipping, cropping, mosaics, and exposure adjustments. This expanded the
+									dataset to over 5,800 training images, allowing the model to better generalize across diverse
+									inspection scenarios.
+									<br /><br />
+
+									Finally, the dataset was split into 78% training, 15% validation, and 7% testing subsets.
+									While slightly under the conventional 30% validation/testing split, this division maximized
+									the model’s exposure to valuable training data while retaining enough test cases for reliable
+									evaluations.
+								</p>
+							</article>
+
 							<!-- Results -->
 							<article class="project-bubble results">
 								<h2 class="body subheading mobile">Results</h2>
 								<p class="paragraph-light mobile">
-									The AAVI system demonstrated exceptional performance in defect detection, achieving the
-									highest accuracy rates reported in the current literature. The system successfully
-									demonstrated high accuracy in identifying various types of surface defects, real-time
-									processing capabilities, robust performance under different lighting conditions, and
-									significant reduction in inspection time compared to manual methods. These results validate
-									the effectiveness of our approach and its potential for real-world applications in aircraft
-									maintenance and safety inspection procedures.
+									The evaluation focused on both model performance and practical feasibility in real-time
+									environments. The YOLO-NAS-L model was fine-tuned on the dataset and compared against
+									competing architectures in the YOLO family (YOLOv5-L, YOLOv8-L, YOLOv9-e).
+									<br /><br />
+
+									The fine-tuned YOLO-NAS-L model demonstrated strong results, achieving an mAP@50 of 84.67%. A
+									confidence threshold of 47% optimized its F2-score at 82.09%, with precision at 83.82% and
+									recall at 81.67%. Importantly, the system outperformed human inspectors, achieving a
+									comparable rate of false negatives (33%) while significantly reducing inspection times.
+									<br /><br />
+
+									Latency tests demonstrated the model’s viability for real-time deployment. On an NVIDIA T4
+									GPU, inference latency was just 10.15 ms (equivalent to 98.52 frames per second) using FP16
+									quantization. The model performed well across all tested platforms, including TensorRT-based
+									hardware.
+									<br /><br />
+
+									<strong>Class-Specific Insights:</strong> <br />
+									• Dents: High detection accuracy (~92%) and the lowest false negative rate (21%). <br />
+									• Cracks: Lowest performance due to class imbalances and dataset variability; 47% false
+									negatives. <br />
+									• Missing Fasteners: Intermediate performance with 32% false negatives. <br />
+									<br />
+									Limitations remain in scenarios with non-standard lighting, weather conditions, and rare
+									defect types. Addressing these will improve generalizability and reliability.
 								</p>
 							</article>
 
@@ -201,11 +277,17 @@
 							<article class="project-bubble potential-improvements">
 								<h2 class="body subheading mobile">Potential Improvements</h2>
 								<p class="paragraph-light mobile">
-									Future enhancements could include expanding the system to handle a wider variety of aircraft
-									types and defect categories, implementing automated severity assessment for detected defects,
-									developing a more sophisticated tracking system for defect progression over time, and
-									integrating the system with existing maintenance management software for seamless workflow
-									integration.
+									<strong>1. Dataset Refinement:</strong> Increasing diversity in images by incorporating
+									weather conditions, angles, and lighting scenarios. Labeling defect severity can add practical
+									value for prioritizing maintenance actions. <br /><br />
+
+									<strong>2. Model Innovation:</strong> Expanding the DDPH component with advanced NAS
+									techniques, such as the Clonal Selection Algorithm (CSA), tailored for high-recall,
+									high-precision tasks. <br /><br />
+
+									<strong>3. Hardware Optimization:</strong> Validating DDRT for deployment on compact platforms
+									like NVIDIA Jetson Xavier, ensuring real-time, edge-based inspections using industry-standard
+									drones.
 								</p>
 							</article>
 

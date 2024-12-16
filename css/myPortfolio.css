@@ -2693,3 +2693,15 @@ body {
 	margin-top: 40px;
 	text-align: center;
 }
+
+/* End of page spacer */
+.end-of-page-spacer {
+	padding-top: 100px;
+}
+
+/* Button Container */
+.button-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}

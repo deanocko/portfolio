@@ -1373,11 +1373,8 @@ figcaption {
 	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.div-block-6 {
+.project-tile-text-container {
 	padding: 20px 15px;
-}
-
-.landing-section {
 }
 
 .about-me-section {
@@ -1650,9 +1647,6 @@ figcaption {
 .text-block-4 {
 	outline-offset: 0px;
 	outline: 3px #1a1b1f;
-}
-
-.text-block-5 {
 	text-decoration: none;
 }
 
@@ -2545,9 +2539,8 @@ body {
 }
 
 [data-theme="dark"] .project-card {
-	background-color: ;
+	background-color: var(--card-background);
 	border: 3px solid var(--card-background);
-	/* border: 3px solid rgba(255, 255, 255, 0.1); */
 	box-shadow: 0 4px 6px var(--card-shadow);
 	transition: all 0.3s ease;
 }

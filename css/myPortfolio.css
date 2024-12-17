@@ -1644,10 +1644,11 @@ figcaption {
 	text-decoration: none;
 }
 
-.text-block-4 {
-	outline-offset: 0px;
-	outline: 3px #1a1b1f;
-	text-decoration: none;
+.project-tile-description-text {
+	margin: 0 0 5px 0; /* Added space below description */
+	color: #666; /* Keep same color */
+	line-height: 1.3; /* Keep tight line height */
+	font-size: 15px;
 }
 
 .div-block-12 {
@@ -1960,10 +1961,6 @@ figcaption {
 		line-height: 1.3;
 	}
 
-	.text-block-4 {
-		font-size: 16px;
-	}
-
 	.intro-heading {
 		font-size: 26px;
 		line-height: 1.3;
@@ -1994,10 +1991,6 @@ figcaption {
 
 	.project-name {
 		font-size: 18px;
-	}
-
-	.text-block-4 {
-		font-size: 14px;
 	}
 
 	.flex-column-start.project-card {
@@ -2109,13 +2102,6 @@ html {
 	line-height: 1.2; /* Keep tight line height */
 }
 
-.text-block-4.text-block-5 {
-	margin: 0 0 5px 0; /* Added space below description */
-	color: #666; /* Keep same color */
-	line-height: 1.3; /* Keep tight line height */
-	font-size: 15px; /* Keep same size */
-}
-
 .project-image {
 	width: 100%; /* Full width */
 	height: 255px; /* Standard height */
@@ -2214,7 +2200,7 @@ html {
 	margin: 8px 0 4px 0; /* More spacing for capstone title */
 }
 
-.flex-column-start.project-card.large .text-block-4.text-block-5 {
+.flex-column-start.project-card.large .project-tile-description-text.text-block-5 {
 	font-size: 16px; /* Larger text for capstone */
 	margin: 0 0 8px 0; /* More spacing below capstone description */
 }
@@ -2556,7 +2542,7 @@ body {
 	color: #ffffff !important;
 }
 
-[data-theme="dark"] .text-block-4,
+[data-theme="dark"] .project-tile-description-text,
 [data-theme="dark"] .text-block-5,
 [data-theme="dark"] .paragraph-light {
 	color: #ffffff !important;

@@ -602,7 +602,7 @@ figcaption {
 }
 
 .navigation {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: var(--nav-background);
 	align-items: center;
 	margin-top: 0;
 	padding: 20px 30px;
@@ -2612,6 +2612,10 @@ body {
 .image-container {
 	display: block; /* Ensure the container is a block element */
 	text-align: center; /* Center the caption */
+}
+
+.section-divider {
+	height: 100px;
 }
 
 .caption {

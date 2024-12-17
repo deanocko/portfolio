@@ -1547,8 +1547,9 @@ figcaption {
 .contact-section {
 	min-height: 65vh;
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 	padding-bottom: 20px;
 }
 
@@ -1649,6 +1650,10 @@ figcaption {
 	color: #666; /* Keep same color */
 	line-height: 1.3; /* Keep tight line height */
 	font-size: 15px;
+}
+
+.or-spacer {
+	margin-top: 20px;
 }
 
 .div-block-12 {

@@ -1645,12 +1645,12 @@ figcaption {
 }
 
 .explore-projects-button-div {
+	display: flex;
 	justify-content: center;
 	align-self: center;
 	align-items: center;
 	/* padding-bottom: 100px; */
-	padding-bottom: 20px;
-	display: flex;
+	/* padding-bottom: 20px; */
 }
 
 .centre-text {
@@ -2426,6 +2426,7 @@ html {
 	transition: all 0.3s ease;
 	border-radius: 8px;
 	padding: 20px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -2686,7 +2687,7 @@ body {
 
 /* Project navigation button container */
 .explore-projects-button-container {
-	margin-top: 40px;
+	/* margin-top: 40px; */
 	text-align: center;
 }
 

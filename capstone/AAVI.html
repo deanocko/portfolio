@@ -128,7 +128,7 @@
 										model to defect a range of aircraft defects in real-time
 									</li>
 									<li>
-										Constructed a novel, public aircraft defect dataset with Dent, Crack and Missing Fastener
+										Compiled a novel, public aircraft defect dataset with Dent, Crack and Missing Fastener
 										classes
 									</li>
 									<li>
@@ -162,6 +162,7 @@
 									</svg>
 								</a>
 							</div>
+							
 
 							<!-- Project Overview -->
 							<article class="project-bubble overview">
@@ -190,6 +191,24 @@
 									aircraft defect inspection. Its design centers around two components:
 									<br /><br />
 
+									<!-- Image Container -->
+									<div class="image-container">
+										<img
+											src="../images/AAVIsystemDiagram.png"
+											loading="lazy"
+											alt="Project Title"
+											style="
+												width: 70%;
+												height: auto;
+												display: block;
+												border-radius: 6px;
+												margin: 0 6px;
+												max-width: calc(100% - 12px);
+											"
+										/>
+										<div class="caption">AAVI System Diagram</div>
+									</div>
+
 									1. Data Acquisition Network (DAN) The DAN employs a hybrid solution of drones and stationary
 									cameras to ensure thorough visual coverage of aircraft, even in challenging inspection areas.
 									Unmanned Aerial Vehicles (UAVs), such as DJI Matrice drones, scan the external and upper
@@ -213,6 +232,25 @@
 									future-proof, with potential applications in edge hardware scenarios, regulations adherence,
 									and evolving model architectures.
 								</p>
+								<!-- Image Container -->
+								<div class="image-container">
+									<img
+										src="../images/AAVI Flowchart.png"
+										loading="lazy"
+										alt="Project Title"
+										style="
+											width: 100%;
+											height: auto;
+											display: block;
+											border-radius: 6px;
+											margin: 0 6px;
+											max-width: calc(100% - 12px);
+										"
+									/>
+									<div class="caption">AAVI System Process Flowchart.</div>
+								</div>
+
+								<br /><br />
 
 								<h2 class="body subheading mobile">Dataset Creation and Composition</h2>
 								<p class="paragraph-light mobile">
@@ -232,14 +270,69 @@
 									applied, such as flipping, cropping, mosaics, and exposure adjustments. This expanded the
 									dataset to over 5,800 training images, allowing the model to better generalize across diverse
 									inspection scenarios.
-									<br /><br />
+									<br />
+
+									<!-- Image Container -->
+									<div class="image-container">
+										<img
+											src="../images/datasetExample.png"
+											loading="lazy"
+											alt="Project Title"
+											style="
+												width: 100%;
+												height: auto;
+												display: block;
+												border-radius: 6px;
+												margin: 0 6px;
+												max-width: calc(100% - 12px);
+											"
+										/>
+									</div>
+									<br />
 
 									Finally, the dataset was split into 78% training, 15% validation, and 7% testing subsets.
 									While slightly under the conventional 30% validation/testing split, this division maximized
 									the model’s exposure to valuable training data while retaining enough test cases for reliable
 									evaluations.
+
+									<!-- Image Container -->
+									<div class="image-container">
+										<img
+											src="../images/datasetHealth.png"
+											loading="lazy"
+											alt="Project Title"
+											style="
+												width: 100%;
+												height: auto;
+												display: block;
+												border-radius: 6px;
+												margin: 0 6px;
+												max-width: calc(100% - 12px);
+											"
+										/>
+										<div class="caption">Class breakdown of the compiled dataset.</div>
+									</div>
+
+					
 								</p>
 							</article>
+
+							<!-- Access the Compiled Dataset Button -->
+							<div class="explore-projects-button-div explore-projects-button-container">
+								<a
+									href="https://app.roboflow.com/dean-ockenden/aircraft-defects-sycqk/3"
+									target="_blank"
+									class="button w-button"
+								>
+									Access The Compiled Dataset
+									<svg class="document-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path
+											d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"
+										/>
+										<path d="M9 13h6v2H9zm0 3h6v2H9z" />
+									</svg>
+								</a>
+							</div>
 
 							<!-- Results -->
 							<article class="project-bubble results">
@@ -260,7 +353,25 @@
 									GPU, inference latency was just 10.15 ms (equivalent to 98.52 frames per second) using FP16
 									quantization. The model performed well across all tested platforms, including TensorRT-based
 									hardware.
-									<br /><br />
+									<br />
+									<!-- Image Container -->
+									<div class="image-container">
+										<img
+											src="../images/confusionMatrix.png"
+											loading="lazy"
+											alt="Project Title"
+											style="
+												width: 80%;
+												height: auto;
+												display: block;
+												border-radius: 6px;
+												margin: 0 6px;
+												max-width: calc(100% - 12px);
+											"
+										/>
+										<div class="caption">Confusion Matrix for the Finetuned model optimised at 47% confidence.</div>
+									</div>
+									<br />
 
 									<strong>Class-Specific Insights:</strong> <br />
 									• Dents: High detection accuracy (~92%) and the lowest false negative rate (21%). <br />

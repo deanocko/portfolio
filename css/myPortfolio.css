@@ -2594,8 +2594,11 @@ body {
 
 .video-container,
 .image-container {
-	display: block; /* Ensure the container is a block element */
+	display: flex; /* Ensure the container is a block element */
+	flex-direction: column;
 	text-align: center; /* Center the caption */
+	justify-content: center;
+	align-items: center;
 }
 
 .section-divider {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Grid</title>
+		<link href="../css/variables.css" rel="stylesheet" type="text/css" />
+		<link href="../css/myPortfolio.css" rel="stylesheet" type="text/css" />
+		<style>
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr); /* 5 columns */
+				grid-template-rows: repeat(2, auto); /* 2 rows */
+				gap: 10px; /* Space between images */
+				max-width: 1200px; /* Optional: max width for the grid */
+				margin: 0 auto; /* Center the grid */
+			}
+			.image-grid img {
+				width: 100%; /* Make images responsive */
+				height: auto; /* Maintain aspect ratio */
+				border-radius: 6px; /* Optional: rounded corners */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="image-grid">
+			<img src="images/image1.jpg" alt="Image 1" />
+			<img src="images/image2.jpg" alt="Image 2" />
+			<img src="images/image3.jpg" alt="Image 3" />
+			<img src="images/image4.jpg" alt="Image 4" />
+			<img src="images/image5.jpg" alt="Image 5" />
+			<img src="images/image6.jpg" alt="Image 6" />
+			<img src="images/image7.jpg" alt="Image 7" />
+			<img src="images/image8.jpg" alt="Image 8" />
+			<img src="images/image9.jpg" alt="Image 9" />
+			<img src="images/image10.jpg" alt="Image 10" />
+		</div>
+	</body>
+</html>

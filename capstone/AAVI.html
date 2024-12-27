@@ -179,8 +179,8 @@
 
 									Our approach involved several key steps including dataset preparation with diverse aircraft
 									surface defect images, implementation of YOLO-NAS architecture for defect detection, model
-									training with optimized hyperparameters, extensive testing and validation on real-world
-									scenarios, and thorough performance analysis and optimization.
+									training with optimised hyperparameters, extensive testing and validation on real-world
+									scenarios, and thorough performance analysis and optimisation.
 								</p>
 							</article>
 
@@ -194,7 +194,7 @@
 									<!-- Image Container -->
 									<div class="image-container">
 										<img
-											src="../images/AAVIsystemDiagram.png"
+											src="../images/AAVIsystemDiagram.webp"
 											loading="lazy"
 											alt="Project Title"
 											style="
@@ -220,9 +220,9 @@
 									models for defect detection. The first model performs Defect Detection in Real-Time (DDRT),
 									designed for speed and edge-device efficiency, such as GPU-enabled platforms. This is critical
 									for providing actionable insights within the 20–40 minute window between flights. The second
-									model, for Defect Detection Post-Hoc (DDPH), prioritizes high precision and recall, ensuring
+									model, for Defect Detection Post-Hoc (DDPH), prioritises high precision and recall, ensuring
 									even subtle defects not flagged by the real-time system are identified before the aircraft
-									Post-Hoc (DDPH), prioritizes high precision and recall, ensuring even subtle defects not
+									Post-Hoc (DDPH), prioritises high precision and recall, ensuring even subtle defects not
 									flagged by the real-time system are identified before the aircraft resumes operations.
 									<br /><br />
 
@@ -268,14 +268,14 @@
 
 									To improve robustness against variability in real-world inspections, augmentations were
 									applied, such as flipping, cropping, mosaics, and exposure adjustments. This expanded the
-									dataset to over 5,800 training images, allowing the model to better generalize across diverse
+									dataset to over 5,800 training images, allowing the model to better generalise across diverse
 									inspection scenarios.
 									<br />
 
 									<!-- Image Container -->
 									<div class="image-container">
 										<img
-											src="../images/datasetExample.png"
+											src="../images/datasetExample.webp"
 											loading="lazy"
 											alt="Project Title"
 											style="
@@ -291,10 +291,10 @@
 									<br />
 
 									Finally, the dataset was split into 78% training, 15% validation, and 7% testing subsets.
-									While slightly under the conventional 30% validation/testing split, this division maximized
+									While slightly under the conventional 30% validation/testing split, this division maximised
 									the model’s exposure to valuable training data while retaining enough test cases for reliable
 									evaluations.
-									<br />
+									<br /><br />
 
 									<!-- Image Container -->
 									<div class="image-container">
@@ -342,19 +342,73 @@
 									The evaluation focused on both model performance and practical feasibility in real-time
 									environments. The YOLO-NAS-L model was fine-tuned on the dataset and compared against
 									competing architectures in the YOLO family (YOLOv5-L, YOLOv8-L, YOLOv9-e).
-									<br /><br />
+									<br />
+									
+									<table>
+										<caption>Performance comparison of YOLO family models finetuned on the novel dataset.</caption> <!-- Optional: Title for the table -->
+										<thead>
+											<tr> <!-- Heading Row  -->
+												<th>Metric</th>
+												<th>v5-L</th>
+												<th>v8-L</th>
+												<th>NAS-L (47%)</th>
+												<th>v9-e</th>									
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Recall(50)</td> <!-- Metric  -->
+												<td>0.759</td> <!-- v5  -->
+												<td>0.784</td> <!-- v8  -->
+												<td><strong>0.8167</strong></td> <!-- NAS -->
+												<td>0779</td> <!-- v9 -->											
+											</tr>
+											<tr>
+												<td>Precision(50)</td> <!-- Metric  -->
+												<td>0.877</td> <!-- v5  -->
+												<td>0.880</td> <!-- v8  -->
+												<td>0.8382</td> <!-- NAS -->
+												<td><strong>0.881</strong></td> <!-- v9 -->
+												
+											</tr>
+											<tr>
+												<td>mAP(50)</td> <!-- Metric  -->
+												<td>0.825</td> <!-- v5  -->
+												<td><strong>0.848</strong></td> <!-- v8  -->
+												<td>0.8467</td> <!-- NAS -->
+												<td>0.840</td> <!-- v9 -->
+											</tr>
+											<tr></tr>
+												<td>F2(50)</td> <!-- Metric  -->
+												<td>0.78</td> <!-- v5  -->
+												<td>0.8014</td> <!-- v8  -->
+												<td><strong>0.8209</strong></td> <!-- NAS -->
+												<td>0.8053</td> <!-- v9 -->
+											</tr>
+											<tr></tr> <!-- FPS -->
+												<td>FPS (FP16)</td> <!-- Metric  -->
+												<td>131.06</td> <!-- v5  -->
+												<td><strong>136.71</strong></td> <!-- v8  -->
+												<td>98.52</td> <!-- NAS -->
+												<td>73.45</td> <!-- v9 -->
+											</tr>
+										</tbody>
+									</table>
+									<br />
 
-									The fine-tuned YOLO-NAS-L model demonstrated strong results, achieving an mAP@50 of 84.67%. A
-									confidence threshold of 47% optimized its F2-score at 82.09%, with precision at 83.82% and
-									recall at 81.67%. Importantly, the system outperformed human inspectors, achieving a
-									comparable rate of false negatives (33%) while significantly reducing inspection times.
+									The fine-tuned YOLO-NAS-L model demonstrated strong results, achieving an mAP@50 of 84.67%. Using and optimised
+									confidence threshold of 47% it achieved an F2-score of 82.09%, with precision at 83.82% and
+									recall at 81.67%. Importantly, the system achieved a
+									comparable rate of false negatives (33%) to human inspectors while significantly reducing inspection times.
 									<br /><br />
 
 									Latency tests demonstrated the model’s viability for real-time deployment. On an NVIDIA T4
-									GPU, inference latency was just 10.15 ms (equivalent to 98.52 frames per second) using FP16
-									quantization. The model performed well across all tested platforms, including TensorRT-based
-									hardware.
+									GPU, inference latency was 10.15 ms or 98.52 frames per second using FP16
+									quantization.
 									<br />
+
+		
+
 									<!-- Image Container -->
 									<div class="image-container">
 										<img
@@ -370,11 +424,12 @@
 												max-width: calc(100% - 12px);
 											"
 										/>
-										<div class="caption">Confusion Matrix for the Finetuned model optimised at 47% confidence.</div>
+										<div class="caption">Confusion Matrix for the Finetuned YOLO-NAS model optimised at 47% confidence.</div>
 									</div>
 									<br />
 
-									<strong>Class-Specific Insights:</strong> <br />
+									<strong>Class-Specific Insights:</strong> 
+									<br />
 									• Dents: High detection accuracy (~92%) and the lowest false negative rate (21%). <br />
 									• Cracks: Lowest performance due to class imbalances and dataset variability; 47% false
 									negatives. <br />
@@ -385,19 +440,40 @@
 								</p>
 							</article>
 
+							<!-- Inference Examples -->
+							<article class="project-bubble inference-examples">
+								<h2 class="body subheading mobile centre-text">Inference Examples</h2>
+								<!-- Image Container -->
+								<div class="image-container">
+									<img
+										src="../images/Inference Examples.webp"
+										loading="lazy"
+										alt="Project Title"
+										style="
+											width: 100%;
+											height: auto;
+											display: block;
+											border-radius: 6px;
+											margin: 0 6px;
+											max-width: calc(100% - 12px);
+										"
+									/>
+								</div>
+							</article>
+
 							<!-- Potential Improvements -->
 							<article class="project-bubble potential-improvements">
 								<h2 class="body subheading mobile">Potential Improvements</h2>
 								<p class="paragraph-light mobile">
-									<strong>1. Dataset Refinement:</strong> Increasing diversity in images by incorporating
+									<strong>1. Dataset Refinement</strong><br /> Increasing diversity in images by incorporating
 									weather conditions, angles, and lighting scenarios. Labeling defect severity can add practical
 									value for prioritizing maintenance actions. <br /><br />
 
-									<strong>2. Model Innovation:</strong> Expanding the DDPH component with advanced NAS
+									<strong>2. Model Innovation</strong><br /> Expanding the DDPH component with advanced NAS
 									techniques, such as the Clonal Selection Algorithm (CSA), tailored for high-recall,
 									high-precision tasks. <br /><br />
 
-									<strong>3. Hardware Optimization:</strong> Validating DDRT for deployment on compact platforms
+									<strong>3. Hardware Optimisation</strong><br /> Validating DDRT for deployment on compact platforms
 									like NVIDIA Jetson Xavier, ensuring real-time, edge-based inspections using industry-standard
 									drones.
 								</p>

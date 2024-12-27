@@ -139,6 +139,32 @@ table {
 	border-radius: 8px;
 }
 
+strong {
+	font-weight: bold;
+}
+
+/* Results Table */
+table {
+	width: 100%; /* Full width */
+	border-collapse: collapse; /* Merge borders */
+}
+
+th,
+td {
+	border: 1px solid #ddd; /* Border for cells */
+	padding: 10px; /* Padding inside cells */
+	text-align: left; /* Align text to the left */
+}
+
+th {
+	background-color: #f2f2f2; /* Light gray background for headers */
+}
+
+/* Optional: Add some spacing between rows */
+tr:nth-child(even) {
+	background-color: #f9f9f9; /* Light background for even rows */
+}
+
 /* CHAT GPT FIT NORWAY IMAGE */
 
 .w-layout-grid {

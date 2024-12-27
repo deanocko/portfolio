@@ -209,14 +209,16 @@
 										<div class="caption">AAVI System Diagram</div>
 									</div>
 
-									1. Data Acquisition Network (DAN) The DAN employs a hybrid solution of drones and stationary
+									<strong>1. Data Acquisition Network (DAN)</strong><br />
+									The DAN employs a hybrid solution of drones and stationary
 									cameras to ensure thorough visual coverage of aircraft, even in challenging inspection areas.
 									Unmanned Aerial Vehicles (UAVs), such as DJI Matrice drones, scan the external and upper
 									surfaces, while stationary cameras focus on intricate areas like undercarriages and landing
 									gear. Images captured by the DAN are streamed in real-time for processing.
 									<br /><br />
 
-									2. Data Analysis and Sharing Hub (DASH) Captured image data is routed to DASH, which uses DCNN
+									<strong>2. Data Analysis and Sharing Hub (DASH) </strong><br> 
+									Captured image data is routed to DASH, which uses DCNN
 									models for defect detection. The first model performs Defect Detection in Real-Time (DDRT),
 									designed for speed and edge-device efficiency, such as GPU-enabled platforms. This is critical
 									for providing actionable insights within the 20–40 minute window between flights. The second
@@ -378,14 +380,14 @@
 												<td>0.8467</td> <!-- NAS -->
 												<td>0.840</td> <!-- v9 -->
 											</tr>
-											<tr></tr>
+											<tr>
 												<td>F2(50)</td> <!-- Metric  -->
 												<td>0.78</td> <!-- v5  -->
 												<td>0.8014</td> <!-- v8  -->
 												<td><strong>0.8209</strong></td> <!-- NAS -->
 												<td>0.8053</td> <!-- v9 -->
 											</tr>
-											<tr></tr> <!-- FPS -->
+											<tr> <!-- FPS -->
 												<td>FPS (FP16)</td> <!-- Metric  -->
 												<td>131.06</td> <!-- v5  -->
 												<td><strong>136.71</strong></td> <!-- v8  -->
@@ -405,7 +407,7 @@
 									Latency tests demonstrated the model’s viability for real-time deployment. On an NVIDIA T4
 									GPU, inference latency was 10.15 ms or 98.52 frames per second using FP16
 									quantization.
-									<br />
+									<br /><br />
 
 		
 

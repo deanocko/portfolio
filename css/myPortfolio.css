@@ -160,9 +160,18 @@ th {
 	background-color: #f2f2f2; /* Light gray background for headers */
 }
 
+[data-theme="dark"] th {
+	background-color: #909090; /* Dark gray for headings */
+	color: white; /* White text for headings */
+}
+
 /* Optional: Add some spacing between rows */
 tr:nth-child(even) {
 	background-color: #f9f9f9; /* Light background for even rows */
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+	background-color: #333; /* Light background for even rows */
 }
 
 /* CHAT GPT FIT NORWAY IMAGE */
@@ -2637,6 +2646,10 @@ body {
 	margin-top: 5px; /* Space above the caption */
 	margin-bottom: 15px; /* Space below the caption */
 	font-style: italic; /* Optional: italicize the caption */
+}
+
+[data-theme="dark"] .caption {
+	color: #f2f2f2; /* Use a color that fits your design */
 }
 
 .main-content-container {

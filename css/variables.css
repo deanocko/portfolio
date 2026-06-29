@@ -1,53 +1,144 @@
+/* ============================================================
+   DESIGN SYSTEM — single source of truth for all design tokens
+   ============================================================ */
+
+
+/* === Colours === */
+
 :root {
-	/* Colors */
-	--background-color: #ffffff;
-	--text-color: #1a1b1f;
-	--nav-background: rgba(255, 255, 255, 0.98);
-	--card-background: #ffffff;
-	--card-shadow: rgba(0, 0, 0, 0.1);
-	--nav-item-color: #727272;
-	--nav-item-hover: #2fa153;
-	--logo-color: #1a1b1f;
-	--primary-green: #2fa153;
+	/* Surfaces & backgrounds */
+	--background-color:    #ffffff;
+	--card-background:     #ffffff;
+	--nav-background:      rgba(255, 255, 255, 0.98);
+	--color-off-white:     #f4f4f4;   /* contact / section backgrounds */
+	--color-surface-subtle: #f8f9fa;  /* tech category card bg */
+
+	/* Text */
+	--text-color:          #1a1b1f;
+	--color-ink-hover:     #32343a;   /* a:hover */
+	--color-ink-active:    #43464d;   /* a:active */
+	--color-ink-footer:    #3a4554;   /* footer copyright */
+
+	/* Navigation */
+	--nav-item-color:      #727272;
+	--nav-item-hover:      #2fa153;
+	--logo-color:          #1a1b1f;
+	--color-nav-open-bg:   rgba(128, 128, 128, 0.1); /* mobile nav open state */
+
+	/* Brand greens */
+	--primary-green:       #2fa153;
 	--primary-green-hover: #52ce5f;
-	--light-grey: #e4e4e4;
-	--dark-grey: #727272;
-	--black: #000000;
-	--white: #ffffff;
+	--color-green-bright:  #1fcf0f;   /* inverted nav item, projects-button hover */
+	--color-green-success: #12b878;   /* form success message */
 
-	/* Fonts */
-	--primary-font: Manrope, sans-serif;
-	--secondary-font: Montserrat, sans-serif;
+	/* Feedback */
+	--color-red-error:     #db4b68;   /* form error message */
 
-	/* Spacing */
-	--nav-padding: 20px 30px;
-	--section-margin: 30px;
-	--card-padding: 20px;
-	--button-padding: 15px 25px;
+	/* Greys */
+	--light-grey:          #e4e4e4;
+	--dark-grey:           #727272;
+	--black:               #000000;
+	--white:               #ffffff;
+	--color-blockquote-border: #e2e2e2;
 
-	/* Border Radius */
-	--border-radius-sm: 4px;
-	--border-radius-md: 8px;
-	--border-radius-lg: 30px;
-
-	/* Transitions */
-	--transition-speed: 0.3s;
-	--transition-timing: ease;
+	/* Table */
+	--color-table-border:      #ddd;
+	--color-table-header:      #cdcdcd;
+	--color-table-row-alt:     #f9f9f9;
 
 	/* Shadows */
-	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.12);
-	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
-	--shadow-lg: 0 6px 8px rgba(0, 0, 0, 0.15);
+	--card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode Theme Colors */
+/* Dark mode overrides */
 [data-theme="dark"] {
-	--background-color: #1a1b1f;
-	--text-color: #ffffff;
-	--nav-background: rgba(26, 27, 31, 0.98);
-	--card-background: #1a1b1f;
-	--card-shadow: rgba(0, 0, 0, 0.3);
-	--nav-item-color: #e0e0e0;
-	--nav-item-hover: #4cdb7f;
-	--logo-color: #ffffff;
+	--background-color:    #1a1b1f;
+	--text-color:          #ffffff;
+	--nav-background:      rgba(26, 27, 31, 0.98);
+	--card-background:     #1a1b1f;
+	--card-shadow:         rgba(0, 0, 0, 0.3);
+	--nav-item-color:      #e0e0e0;
+	--nav-item-hover:      #4cdb7f;
+	--logo-color:          #ffffff;
+
+	/* Table */
+	--color-table-header:  #909090;
+	--color-table-row-alt: #333;
 }
+
+
+/* === Typography === */
+
+:root {
+	--primary-font:   Manrope, sans-serif;
+	--secondary-font: Montserrat, sans-serif;
+}
+
+
+/* === Spacing === */
+
+:root {
+	--nav-padding:    20px 30px;
+	--section-margin: 30px;
+	--card-padding:   20px;
+	--button-padding: 15px 25px;
+	--scroll-offset:  100px;  /* scroll-padding-top */
+}
+
+
+/* === Border Radius === */
+
+:root {
+	--radius-sm:     4px;   /* subtle rounding (inputs, small elements) */
+	--radius-md:     8px;   /* cards, images */
+	--radius-lg:     30px;  /* nav items, logo pill */
+	--radius-pill:   50px;  /* fully rounded buttons */
+	--radius-card:   12px;  /* tech category cards */
+	--radius-item:   6px;   /* tech items */
+	--radius-circle: 50%;   /* dark mode toggle */
+}
+
+
+/* === Shadows === */
+
+:root {
+	--shadow-sm:   0 2px 4px rgba(0, 0, 0, 0.12);
+	--shadow-md:   0 4px 6px rgba(0, 0, 0, 0.15);
+	--shadow-lg:   0 6px 8px rgba(0, 0, 0, 0.15);
+	--shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);   /* tech cards, project bubble */
+}
+
+
+/* === Transitions === */
+
+:root {
+	--transition:      0.3s ease;
+	--transition-slow: 0.4s ease; /* form field borders — intentionally slower */
+}
+
+
+/* === Z-index === */
+
+:root {
+	--z-logo: 1;     /* logo sits above content */
+	--z-nav:  1000;  /* mobile nav dropdown */
+}
+
+
+/* === Layout === */
+
+:root {
+	--max-width-wide:      1200px; /* .main-content-container */
+	--max-width-container: 1140px; /* .container */
+	--max-width-content:    900px; /* project page content-wrapper */
+}
+
+
+/*
+ * BREAKPOINTS (reference only — CSS custom properties cannot be used in @media queries)
+ *
+ *   992px  desktop nav show/hide
+ *   991px  tablet layout
+ *   767px  mobile layout
+ *   479px  small mobile
+ */
